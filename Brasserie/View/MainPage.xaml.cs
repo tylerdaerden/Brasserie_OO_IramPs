@@ -1,4 +1,4 @@
-﻿namespace Brasserie
+﻿namespace Brasserie.View
 {
     public partial class MainPage : ContentPage
     {
@@ -17,6 +17,8 @@
                 CounterBtn.Text = $"Clicked {count} time";
             else
                 CounterBtn.Text = $"Clicked {count} times";
+
+            EntryCount.Text = count.ToString();
 
             SemanticScreenReader.Announce(CounterBtn.Text);
         }
