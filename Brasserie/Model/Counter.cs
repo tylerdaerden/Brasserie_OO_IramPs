@@ -31,5 +31,5 @@ namespace Brasserie.Model
         {
             IsInPreAlarm = (CounterValue >= PreAlarmThresold);
         }
-    }
+    }//end class
 }
