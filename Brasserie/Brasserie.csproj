@@ -63,6 +63,11 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <Folder Include="Model\NewFolder\" />
+	  <Folder Include="Model\Restaurant\Activity\" />
+	  <Folder Include="Model\Restaurant\Catering\" />
+	  <Folder Include="Model\Restaurant\Design\" />
+	  <Folder Include="Model\Restaurant\Planning\" />
 	  <Folder Include="ViewModel\" />
 	</ItemGroup>
 
