@@ -1,4 +1,5 @@
 ﻿using Brasserie.Model;
+using Brasserie.Model.Restaurant.People;
 
 namespace Brasserie.View
 {
@@ -24,6 +25,21 @@ namespace Brasserie.View
 
             //SemanticScreenReader.Announce(CounterBtn.Text);
         }
+
+        private void buttonTestCreateFirstPersons_Clicked(object sender, EventArgs e)
+        {
+            Person firstPerson = new Person(id: 1 , lastName: "Beumier" , firstName : "Damien" , gender: true, email:"dambeumier@gmail.com" , mobilePhoneNumber:"0489142293") ;
+            Person secondPerson = new Person(id: 2, lastName: "Deroisin", firstName: "Sophie", gender: false, email: "sophiederoisin@gmail.com", mobilePhoneNumber: "0473121314");
+            Person thirdPerson = new Person(3, "Jandrin", "Marc", true, "jandrinmarc@gmail.com", mobilePhoneNumber: "0485556678") ;
+            Person fourthPerson = new Person(4, "Lupant", "Sebasien");
+            Person fifthPerson = new Person();
+
+
+        //Person TestPerson = new Person( lastName: "Lupant", firstName: "Sebastien");
+        }
+
+
+
     }
 
 }
