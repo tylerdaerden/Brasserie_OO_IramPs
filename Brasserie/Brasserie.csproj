@@ -69,6 +69,7 @@
 	  <Folder Include="Model\Restaurant\Design\" />
 	  <Folder Include="Model\Restaurant\Planning\" />
 	  <Folder Include="ViewModel\" />
+	  <Folder Include="ViewModel\" />
 	</ItemGroup>
 
 </Project>
