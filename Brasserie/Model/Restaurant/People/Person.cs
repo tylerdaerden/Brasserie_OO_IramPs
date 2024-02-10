@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Brasserie.Model.Restaurant.People
 {
-    internal class Person
+    public class Person
     {
     }
 }
