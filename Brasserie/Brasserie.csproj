@@ -57,13 +57,21 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <AndroidResource Remove="Model\NewFolder\**" />
+	  <Compile Remove="Model\NewFolder\**" />
+	  <EmbeddedResource Remove="Model\NewFolder\**" />
+	  <MauiCss Remove="Model\NewFolder\**" />
+	  <MauiXaml Remove="Model\NewFolder\**" />
+	  <None Remove="Model\NewFolder\**" />
+	</ItemGroup>
+
+	<ItemGroup>
 		<PackageReference Include="Microsoft.Maui.Controls" Version="$(MauiVersion)" />
 		<PackageReference Include="Microsoft.Maui.Controls.Compatibility" Version="$(MauiVersion)" />
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="8.0.0" />
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Folder Include="Model\NewFolder\" />
 	  <Folder Include="Model\Restaurant\Activity\" />
 	  <Folder Include="Model\Restaurant\Catering\" />
 	  <Folder Include="Model\Restaurant\Design\" />
