@@ -1,26 +1,28 @@
-﻿namespace Brasserie.View
+﻿using Brasserie.Model;
+
+namespace Brasserie.View
 {
     public partial class MainPage : ContentPage
     {
-        int count = 0;
+        Counter myCounter;
 
         public MainPage()
         {
             InitializeComponent();
+            myCounter = new Counter();
         }
 
         private void OnCounterClicked(object sender, EventArgs e)
         {
-            count++;
 
-            if (count == 1)
-                CounterBtn.Text = $"Clicked {count} time";
-            else
-                CounterBtn.Text = $"Clicked {count} times";
+            myCounter.IncrementCounter();
 
-            EntryCount.Text = count.ToString();
 
-            SemanticScreenReader.Announce(CounterBtn.Text);
+            EntryCount.Text = myCounter.CounterValue.ToString();
+            //texte de la case de clics ↓↓↓
+            CounterBtn.Text = "Nombre de Clics :" + myCounter.CounterValue.ToString();
+
+            //SemanticScreenReader.Announce(CounterBtn.Text);
         }
     }
 
