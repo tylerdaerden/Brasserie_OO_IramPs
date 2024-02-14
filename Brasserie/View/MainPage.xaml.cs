@@ -34,6 +34,11 @@ namespace Brasserie.View
             Person fourthPerson = new Person(4, "Lupant", "Sebasien");
             Person fifthPerson = new Person();
 
+            Person p;
+            p = new Person(6, "Tardif", "Jean");
+
+            secondPerson._email = "04.be";
+            secondPerson._mobilePhoneNumber = "44719";
 
         //Person TestPerson = new Person( lastName: "Lupant", firstName: "Sebastien");
         }

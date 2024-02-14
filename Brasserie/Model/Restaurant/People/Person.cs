@@ -6,15 +6,19 @@ using System.Threading.Tasks;
 
 namespace Brasserie.Model.Restaurant.People
 {
-//#nullable disable
+    //#nullable disable
+
     public class Person
     {
-        private int _id;
-        private string _lastname;
-        private string _firstname;
-        private bool _gender;
-        private string _email;
-        private string _mobilePhoneNumber;
+        private int _id { get; set; }
+        private string _lastname { get; set; }
+        private string _firstname { get; set; }
+        private bool _gender { get; set; }
+        private string _email { get; set; }
+        private string _mobilePhoneNumber { get; set; }
+
+        public int MyProperty { get; set; }
+
 
         public Person(int id , string lastName , string firstName="prenom" , bool gender=true , string email="" ,string mobilePhoneNumber="" )
         {
@@ -28,6 +32,9 @@ namespace Brasserie.Model.Restaurant.People
         }
 
         public Person() { }
+
+
+
     }
 
 
