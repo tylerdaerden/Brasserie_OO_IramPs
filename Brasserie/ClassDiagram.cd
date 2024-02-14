@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
   <Class Name="Brasserie.Model.Restaurant.People.Person">
-    <Position X="13.25" Y="0.5" Width="2.75" />
+    <Position X="13" Y="0.5" Width="2.75" />
     <TypeIdentifier>
       <HashCode>AAECEEACACAAAACQAAFAAAAAAAAAAAAAAAAAAgAACEk=</HashCode>
       <FileName>Model\Restaurant\People\Person.cs</FileName>

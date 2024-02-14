@@ -38,15 +38,13 @@ namespace Brasserie.View
             p = new Person(6, "Tardif", "Jean");
 
 
-
-
         } //end buttonTestCreateFirstPersons_Clicked
 
 
         private void buttonTestEncapsulation_Clicked(object sender, EventArgs e)
         {
             Person p = new Person(id: 2, lastName: "Deroisin", firstName: "Sophie", gender: false, email: "sophiederoisin@gmail.com", mobilePhoneNumber: "0473121314");
-            p.FirstName = "Marie-Sophie";
+            p.FirstName = "Marie§489";
             lblDebug.Text = p.FirstName;
 
         }

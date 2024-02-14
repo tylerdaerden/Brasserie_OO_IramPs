@@ -22,7 +22,6 @@ namespace Brasserie.Model.Restaurant.People
 
         #region Props
 
-
         #region ma soluce
         //public int Id { get; set; }
         //public string LastName { get; set; }
