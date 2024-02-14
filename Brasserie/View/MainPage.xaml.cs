@@ -37,11 +37,25 @@ namespace Brasserie.View
             Person p;
             p = new Person(6, "Tardif", "Jean");
 
-            secondPerson._email = "04.be";
-            secondPerson._mobilePhoneNumber = "44719";
 
-        //Person TestPerson = new Person( lastName: "Lupant", firstName: "Sebastien");
+            //test et reste des tp précédents
+            //secondPerson._email = "04.be";
+            //secondPerson._mobilePhoneNumber = "44719";
+
+            //Person TestPerson = new Person( lastName: "Lupant", firstName: "Sebastien");
+
+
+        } //end buttonTestCreateFirstPersons_Clicked
+
+
+        private void buttonTestEncapsulation_Clicked(object sender, EventArgs e)
+        {
+            Person p = new Person(id: 2, lastName: "Deroisin", firstName: "Sophie", gender: false, email: "sophiederoisin@gmail.com", mobilePhoneNumber: "0473121314");
+            p.FirstName = "Marie-Sophie";
+            lblDebug.Text = p.FirstName;
+
         }
+
 
 
 

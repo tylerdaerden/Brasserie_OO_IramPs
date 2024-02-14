@@ -24,6 +24,17 @@
                 Clicked="buttonTestCreateFirstPersons_Clicked"
                 Style="{StaticResource TestButton}"
                 />
+            
+            <Label
+                x:Name="lblDebug"
+                Text="debug Text"
+                                    />
+            <Button
+               x:Name="buttonTestEncapsulation"
+               Text="Test encapsulation , accesseurs "
+               Clicked="buttonTestEncapsulation_Clicked"
+                Style="{StaticResource TestButton}"
+                            />
 
             <Image
                 Source="dotnet_bot.png"
@@ -48,7 +59,7 @@
                 SemanticProperties.Hint="Counts the number of times you click"
                 Clicked="OnCounterClicked"
                 HorizontalOptions="Fill" />
-            
+
             <Entry x:Name="EntryCount" />
         </VerticalStackLayout>
     </ScrollView>
