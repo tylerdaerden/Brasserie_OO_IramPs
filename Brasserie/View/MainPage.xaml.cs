@@ -38,11 +38,6 @@ namespace Brasserie.View
             p = new Person(6, "Tardif", "Jean");
 
 
-            //test et reste des tp précédents
-            //secondPerson._email = "04.be";
-            //secondPerson._mobilePhoneNumber = "44719";
-
-            //Person TestPerson = new Person( lastName: "Lupant", firstName: "Sebastien");
 
 
         } //end buttonTestCreateFirstPersons_Clicked

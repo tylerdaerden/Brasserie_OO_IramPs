@@ -30,6 +30,8 @@ namespace Brasserie.Model.Restaurant.People
         //public bool Gender { get; set; }
         //public string Email { get; set; }
         //public string MobilePhoneNumber { get; set; } 
+
+        //cette soluce ne fait pas de vérification donc quand même garder ou mieux analyser Soluce Cours pour plus tard
         #endregion
 
         #region Soluce Cours (In progress)
