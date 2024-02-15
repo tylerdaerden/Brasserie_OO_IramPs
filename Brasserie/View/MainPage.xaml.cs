@@ -44,7 +44,7 @@ namespace Brasserie.View
         private void buttonTestEncapsulation_Clicked(object sender, EventArgs e)
         {
             Person p = new Person(id: 2, lastName: "Deroisin", firstName: "Sophie", gender: false, email: "sophiederoisin@gmail.com", mobilePhoneNumber: "0473121314");
-            p.FirstName = "Marie§489";
+            p.FirstName = "Marie-Sophie";
             lblDebug.Text = p.FirstName;
 
         }
