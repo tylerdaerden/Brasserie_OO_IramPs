@@ -34,6 +34,9 @@ namespace Brasserie.View
             Person fourthPerson = new Person(4, "Lupant", "Sebasien");
             Person fifthPerson = new Person();
 
+            //petit ajout perso (réaction au click sur bouton)
+            lblDebug.Text = "Personnes Crées";
+
             //Person p;
             //p = new Person(6, "Tardif", "Jean");
 

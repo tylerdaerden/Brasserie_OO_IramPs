@@ -178,6 +178,8 @@ namespace Brasserie.Model.Restaurant.People
             //tous les tests concluants, saisie valide.
             return true;
         }
+
+
         /// <summary>
         /// check a personal email adress with no specific format
         /// </summary>
@@ -199,6 +201,8 @@ namespace Brasserie.Model.Restaurant.People
             }
             return false;
         }
+
+
         /// <summary>
         /// Check belgian mobile phone number
         /// ou 0475 321990 ou +32475321990
@@ -226,16 +230,6 @@ namespace Brasserie.Model.Restaurant.People
         #endregion
 
         #endregion
-
-
-
-
-
-
-
-
-
-
 
 
     }//end class
