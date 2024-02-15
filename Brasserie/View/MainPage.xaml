@@ -18,6 +18,11 @@
             Padding="30,0"
             Spacing="5">
 
+            <Label
+                x:Name="lblDebug"
+                Text="debug Text"
+                                    />
+
             <Button
                 x:Name="buttonTestCreateFirstPersons"
                 Text=" Créer mes premières personnes"
@@ -25,14 +30,18 @@
                 Style="{StaticResource TestButton}"
                 />
             
-            <Label
-                x:Name="lblDebug"
-                Text="debug Text"
-                                    />
+
             <Button
                x:Name="buttonTestEncapsulation"
                Text="Test encapsulation , accesseurs "
                Clicked="buttonTestEncapsulation_Clicked"
+                Style="{StaticResource TestButton}"
+                            />
+
+            <Button
+               x:Name="buttonTestStatic"
+               Text="Tester Static "
+               Clicked ="buttonTestStatic_Clicked"
                 Style="{StaticResource TestButton}"
                             />
 

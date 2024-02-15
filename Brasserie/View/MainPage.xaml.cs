@@ -34,8 +34,8 @@ namespace Brasserie.View
             Person fourthPerson = new Person(4, "Lupant", "Sebasien");
             Person fifthPerson = new Person();
 
-            Person p;
-            p = new Person(6, "Tardif", "Jean");
+            //Person p;
+            //p = new Person(6, "Tardif", "Jean");
 
 
         } //end buttonTestCreateFirstPersons_Clicked
@@ -49,8 +49,14 @@ namespace Brasserie.View
 
         }
 
+        private void buttonTestStatic_Clicked(object sender, EventArgs e)
+        {
+            string mail = "monmail@gmail.com";
+            bool testMail = Person.CheckEMail(mail);
+            //lblDebug.Text = $" résultat du test de validité du mail {mail} : { testMail.ToString()} ";
+            lblDebug.Text = $"Nombres d'instances de classe Person : {Person.TotalPersons}";
 
-
+        }
 
     }
 

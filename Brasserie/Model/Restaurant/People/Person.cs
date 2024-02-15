@@ -12,17 +12,46 @@ namespace Brasserie.Model.Restaurant.People
     public class Person
     {
         #region Attributs
+
+        //Champs de classe
         private int _id;
         private string _lastName;
         private string _firstName;
         private bool _gender;
         private string _email;
         private string _mobilePhoneNumber;
+        //Champs Static
+        private static int _totalPersons;
+
+        #endregion
+
+
+        #region Constructeurs
+
+        public Person(int id, string lastName, string firstName = "prenom", bool gender = true, string email = "", string mobilePhoneNumber = "")
+        {
+            Id = id;
+            LastName = lastName;
+            FirstName = firstName;
+            Gender = gender;
+            Email = email;
+            MobilePhoneNumber = mobilePhoneNumber;
+            TotalPersons++;
+
+        }
+
+
+
+        public Person() 
+        {
+            TotalPersons++;
+        }
+        
         #endregion
 
         #region Props
 
-        #region ma soluce
+        #region Props Automatique (sans vérification)
         //public int Id { get; set; }
         //public string LastName { get; set; }
         //public string FirstName { get; set; }
@@ -33,7 +62,7 @@ namespace Brasserie.Model.Restaurant.People
         //cette soluce ne fait pas de vérification donc quand même garder ou mieux analyser Soluce Cours pour plus tard
         #endregion
 
-        #region Soluce Cours (In progress)
+        #region Props Soluce Cours (Avec Vérifications)
 
         /// <summary>
         /// Id number
@@ -98,6 +127,15 @@ namespace Brasserie.Model.Restaurant.People
                     _mobilePhoneNumber = value;
                 }
             }
+        }
+
+        /// <summary>
+        /// Totalisateurs d'instances de classe Person
+        /// </summary>
+        public static int TotalPersons
+        {
+            get => _totalPersons; private set => _totalPersons = value;
+
         }
         /// <summary>
         /// Check LastName or FirstName
@@ -183,6 +221,8 @@ namespace Brasserie.Model.Restaurant.People
 
 
 
+
+
         #endregion
 
         #endregion
@@ -190,18 +230,11 @@ namespace Brasserie.Model.Restaurant.People
 
 
 
-        public Person(int id , string lastName , string firstName="prenom" , bool gender=true , string email="" ,string mobilePhoneNumber="" )
-        {
-            _id = id;
-            _lastName = lastName;
-            _firstName = firstName;
-            _gender = gender;
-            _email = email;
-            _mobilePhoneNumber = mobilePhoneNumber;
 
-        }
 
-        public Person() { }
+
+
+
 
 
 
