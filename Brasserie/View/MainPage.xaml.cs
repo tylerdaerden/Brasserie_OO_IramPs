@@ -71,6 +71,19 @@ namespace Brasserie.View
             lblDebug.Text = "Item Crées";
         }
 
+        private void buttonTestCreateDrink_Clicked(object sender, EventArgs e)
+        {
+            Drink UnDemiBelge = new Drink("Une50" ,"Un demi mais façon belge" , 1 , 50 , 4.81 , 6.07 , "UnDemiBelge.jpg" );
+            Drink UnDemiFrance = new Drink("UnDemi", "Un demi mais français soit 33cl", 2, 33, 8.78, 6.14, "UnDemiFrançais.png");
+
+            //petit ajout perso (réaction au click sur bouton)
+            lblDebug.Text = "Drink Crées";
+
+
+        }
+
+        
+
 
 
     }

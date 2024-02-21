@@ -51,6 +51,13 @@
                Clicked ="buttonTestCreateItem_Clicked"
                 Style="{StaticResource TestButton}"
                             />
+            
+            <Button
+               x:Name="buttonTestCreateDrink"
+               Text="Tester CreateDrink "
+               Clicked ="buttonTestCreateDrink_Clicked"
+                Style="{StaticResource TestButton}"
+                            />
 
             <Image
                 Source="dotnet_bot.png"
