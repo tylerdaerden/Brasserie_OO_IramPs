@@ -8,12 +8,24 @@ namespace Brasserie.Model.Restaurant.People
 {
     public class Customer : Person
     {
-        private CustomerType _type;
+        #region Attributs
+
+        private CustomerType _type; 
+
+        #endregion
+
+
+        #region Constructeurs
+
         public Customer(int id, string lastName, string firstName, bool gender, string email, string phone, CustomerType type)
-            : base(id, lastName, firstName, gender, email, phone)
+    : base(id, lastName, firstName, gender, email, phone)
         {
             Type = type;
         }
+
+        #endregion
+
+        #region Propriétés
 
         /// <summary>
         /// Customer type depending on his restaurant attendance
@@ -21,14 +33,12 @@ namespace Brasserie.Model.Restaurant.People
         public CustomerType Type
         {
             get => _type;
-
             set
             {
-
                 _type = value;
-
             }
-        }
+        } 
+
 
         // Définir l'énumération pour les catégories de clients
         public enum CustomerType
@@ -37,9 +47,23 @@ namespace Brasserie.Model.Restaurant.People
             Occasional,
             Regular
         }
+
+        #endregion
+
+
+
+        #region Methodes
+
         /// <summary>
         /// book table, make a reservation instance.
         /// </summary>
-        public void BookTable() { }
+        public void BookTable()
+        {
+
+        } 
+
+        #endregion
+
+
     }
 }

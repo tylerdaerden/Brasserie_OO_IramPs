@@ -9,26 +9,41 @@ namespace Brasserie.Model.Restaurant.People
 {
     public class Manager : StaffMember
     {
+
+        //déclaration des constantes
+        protected const string DEFAULT_PASSWD = "Password01"; //password par défaut
+
+        #region Attributs
+
         private static int MIN_CHAR_PASSWORD = 8;
         private static int MAX_CHAR_PASSWORD = 20;
         private static int KEY_HASH_PASSWORD = 5;
         private static int NBR_CHAR_LASTNAME = 6;  //number of chars in the lastname
         private static int NBR_CHAR_FIRSTNAME = 1; //number of chars in the fistname
         private static double BONUS_RATE = 0.05;
-
-        //déclaration des constantes
-        protected const string DEFAULT_PASSWD = "Password01"; //password par défaut
-
         private string _login;
         private string _password;
+
+        #endregion
+
+
+        #region Constructeurs
+
         public Manager(int id, string lastName, string firstName, bool gender, string email, string phone, string bankAccount, string address, double salary, string password)
-                      : base(id, lastName, firstName, gender, email, phone, bankAccount, address, salary)
+              : base(id, lastName, firstName, gender, email, phone, bankAccount, address, salary)
         {
             BuildLogin();
             Password = password;
         }
 
-        public Manager() : base() { }
+        public Manager() : base()
+        {
+
+        }
+
+        #endregion
+
+        #region Props
 
         /// <summary>
         /// Personal auto builded login
@@ -60,6 +75,10 @@ namespace Brasserie.Model.Restaurant.People
             }
         }
 
+        #endregion
+
+        #region Methode Verifications
+
         /// <summary>
         /// Password must contains at least a figure 0 to 9, at least one uppercase, only alphanumeric characters not éèàâê 
         ///without spaces, at least 8 characters maximum 20. Must not contains firstname, lastname (ingoring case). 
@@ -86,13 +105,11 @@ namespace Brasserie.Model.Restaurant.People
             if (password.Length < MIN_CHAR_PASSWORD)
             {
                 //MessageBox.Show("Le mot de passe doit comporter au moins " + MIN_CHAR_PASSWORD + " caractères", "Erreur de saisie", MessageBoxButton.OK, MessageBoxImage.Warning);
-
                 return false;
             }
             if (password.Length > MAX_CHAR_PASSWORD)
             {
                 //MessageBox.Show("Le mot de passe doit comporter maximum " + MAX_CHAR_PASSWORD + " caractères", "Erreur de saisie", MessageBoxButton.OK, MessageBoxImage.Warning);
-
                 return false;
             }
 
@@ -120,8 +137,12 @@ namespace Brasserie.Model.Restaurant.People
                 return false;
             }
             return true;
-        } //end CheckPassword
+        } //end CheckPassword 
 
+        #endregion
+
+
+        #region Methode de Classe
 
         /// <summary>
         /// Try to change password with a new one. Old password must be entered
@@ -202,13 +223,9 @@ namespace Brasserie.Model.Restaurant.People
         /// </summary>
         private void BuildLogin()
         {
-
-
-
             //only if firstname et lastname are filled.  
             if (!string.IsNullOrEmpty(FirstName) && !string.IsNullOrEmpty(LastName))
             {
-
                 //to build login, ' ' and '-' perhaps in the fisrtname or lastname are deleted
                 string firstNameToUse = Regex.Replace(FirstName, "[ -]", string.Empty);
                 string lastNameToUse = Regex.Replace(LastName, "[ -]", string.Empty);
@@ -233,7 +250,9 @@ namespace Brasserie.Model.Restaurant.People
         private double ComputeBonus()
         {
             return BONUS_RATE * Salary;
-        }
+        } 
+
+        #endregion
 
     }
 }

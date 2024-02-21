@@ -12,19 +12,32 @@ namespace Brasserie.Model.Restaurant.People
     /// </summary>
     public class StaffMember : Person
     {
+        #region Attributs
+
         private string _bankAccount;
         private string _address;
         private double _salary;
 
-        public StaffMember(int id, string lastName, string firstName, bool gender, string email, string phone, string bankAccount, string address, double salary)
-            : base(id, lastName, firstName, gender, email, phone)
+        #endregion
+
+        #region Constructeurs
+
+        public StaffMember(int id, string lastName, string firstName, bool gender, string email, string phone, string bankAccount, string address, double salary) : base(id, lastName, firstName, gender, email, phone)
         {
             BankAccount = bankAccount;
             Address = address;
             Salary = salary;
         }
 
-        public StaffMember() : base() { }
+        public StaffMember() : base()
+        {
+
+        }
+
+        #endregion
+
+        #region Props
+
         /// <summary>
         /// Belgian Bank Account (the owner requires his employees to have a bank account in Belgium)
         /// </summary>
@@ -61,7 +74,6 @@ namespace Brasserie.Model.Restaurant.People
         public double Salary
         {
             get => _salary;
-
             set
             {
                 if (CheckSalary(value))
@@ -71,10 +83,23 @@ namespace Brasserie.Model.Restaurant.People
             }
         }
 
+        #endregion
+
+        #region Methodes
+
         /// <summary>
         /// staff member ask a leave for a period of time
         /// </summary>
-        public void LeaveRequest() { }
+        public void LeaveRequest()
+        {
+
+        }
+
+        #endregion
+
+
+        #region Methodes Verifications
+
         /// <summary>
         ///Check address format typical "23, rue de la bénédiction 7000 Mons"
         ///"[N°](A,B,...), [nom de rue] [code postal] [Ville (Pays)]"
@@ -121,6 +146,8 @@ namespace Brasserie.Model.Restaurant.People
         private bool CheckSalary(double trySalary)
         {
             return trySalary > 0;
-        }
+        } 
+
+        #endregion
     }
 }
