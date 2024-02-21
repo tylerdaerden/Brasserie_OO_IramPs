@@ -71,7 +71,7 @@ namespace Brasserie.Model.Restaurant.People
         /// <summary>
         /// staff member gross salary
         /// </summary>
-        public double Salary
+        protected double Salary
         {
             get => _salary;
             set

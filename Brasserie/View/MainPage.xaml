@@ -45,6 +45,13 @@
                 Style="{StaticResource TestButton}"
                             />
 
+            <Button
+               x:Name="buttonTestCreateItem"
+               Text="Tester CreateItem "
+               Clicked ="buttonTestCreateItem_Clicked"
+                Style="{StaticResource TestButton}"
+                            />
+
             <Image
                 Source="dotnet_bot.png"
                 HeightRequest="185"

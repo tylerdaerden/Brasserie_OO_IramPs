@@ -1,4 +1,5 @@
 ﻿using Brasserie.Model;
+using Brasserie.Model.Restaurant.Catering;
 using Brasserie.Model.Restaurant.People;
 
 namespace Brasserie.View
@@ -60,6 +61,17 @@ namespace Brasserie.View
             lblDebug.Text = $"Nombres d'instances de classe Person : {Person.TotalPersons}";
 
         }
+
+        private void buttonTestCreateItem_Clicked(object sender, EventArgs e)
+        {
+            Item trucComestible = new Item("chose" , "c'est comestible" , 1 , 1.70 , 6.50 , "comestible.jpg");
+            Item trucBuvable = new Item("machin" , "bois" , 2 , 1.78 , 6.47 ,"buvable.gif" );
+
+            //petit ajout perso (réaction au click sur bouton)
+            lblDebug.Text = "Item Crées";
+        }
+
+
 
     }
 

@@ -73,7 +73,6 @@
 
 	<ItemGroup>
 	  <Folder Include="Model\Restaurant\Activity\" />
-	  <Folder Include="Model\Restaurant\Catering\" />
 	  <Folder Include="Model\Restaurant\Planning\" />
 	  <Folder Include="ViewModel\" />
 	  <Folder Include="ViewModel\" />
