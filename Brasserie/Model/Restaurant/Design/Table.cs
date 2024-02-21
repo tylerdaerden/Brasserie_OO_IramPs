@@ -12,10 +12,10 @@ namespace Brasse.Model.Restaurant.Design
     public class Table
     {
         #region Attributs
-
+        //Constantes
         const int MIN_SEATS = 2;
         const int MIN_ID = 1;
-        //Champs de classe 
+        //Champs de classes 
         private int _seatsNumber; //>=2
         private int _idNumber;
         private bool _isNowBusy;
@@ -41,7 +41,7 @@ namespace Brasse.Model.Restaurant.Design
         #region Propriétés
 
         /// <summary> 
-        /// Seats Number
+        /// Seats Number vérifications via methode CheckSeatsNumber
         /// </summary> 
         public int SeatsNumber
         {
@@ -55,7 +55,7 @@ namespace Brasse.Model.Restaurant.Design
             }
         }
         /// <summary> 
-        /// id Number
+        /// id Number , Verification via CheckIdNumber
         /// </summary>
         public int IdNumber
         {
