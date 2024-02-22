@@ -96,7 +96,7 @@ namespace Brasserie.View
             staffmCol.Add(staffm1);
             staffmCol.Add(staffm2);
             staffmCol.Add(m);
-            string s = $"\nnombre d'éléments dans la collection : {staffmCol.Count}";
+            string s = $"nombre d'éléments dans la collection : {staffmCol.Count}";
             foreach (StaffMember sm in staffmCol)
             {
                 s += $"\n{sm.FirstName} {sm.LastName} : {sm.GetType().ToString()}";

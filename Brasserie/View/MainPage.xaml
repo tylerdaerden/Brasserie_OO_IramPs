@@ -7,8 +7,16 @@
         <ResourceDictionary>
             <Style x:Key= "TestButton" TargetType ="Button">
                 <Setter Property="HorizontalOptions" Value="Start" />
-                <Setter Property="FontSize" Value="12" />
-                <Setter Property="BackgroundColor" Value="Grey"/>
+                <Setter Property="FontSize" Value="12"  />
+                <Setter Property="BackgroundColor" Value="MediumPurple"/>
+                <Setter Property="TextColor" Value="WhiteSmoke"/>
+            </Style>
+
+            <Style x:Key="LabelDebug" TargetType="Label">
+                <Setter Property="HorizontalOptions" Value="Start" />
+                <Setter Property="Padding" Value="10" />
+                <Setter Property="BackgroundColor" Value="Grey" />
+                <Setter Property="VerticalTextAlignment"  Value="Center"/>
             </Style>
         </ResourceDictionary>
     </ContentPage.Resources>
@@ -16,11 +24,12 @@
     <ScrollView>
         <VerticalStackLayout
             Padding="30,0"
-            Spacing="5">
+            Spacing="10">
 
             <Label
                 x:Name="lblDebug"
                 Text="debug Text"
+                Style="{StaticResource LabelDebug}"
                                     />
 
             <Button
