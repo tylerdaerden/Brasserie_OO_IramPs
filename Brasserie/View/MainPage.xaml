@@ -59,6 +59,43 @@
                 Style="{StaticResource TestButton}"
                             />
 
+            <Button
+               x:Name="buttonTestCreateDish"
+               Text="Tester CreateDish "
+               Clicked ="buttonTestCreateDish_Clicked"
+                Style="{StaticResource TestButton}"
+                            />
+
+            <Button
+                x:Name="ButtonTestCreateSoft"
+                Text="Tester CreateSoft"
+                Clicked="ButtonTestCreateSoft_Clicked"
+                Style="{StaticResource TestButton}"
+                            />
+
+            <Button
+                x:Name="ButtonTestCreateAlcohol"
+                Text="Tester CreateAlcohol"
+                Clicked="ButtonTestCreateAlcohol_Clicked"
+                Style="{StaticResource TestButton}"
+                            />
+
+            <Button
+                x:Name="ButtonTestCreateAperitif"
+                Text="Tester CreateAperitif"
+                Clicked="ButtonTestCreateAperitif_Clicked"
+                Style="{StaticResource TestButton}"
+                            />
+
+            <Button
+                x:Name="ButtonTestCreateBeer"
+                Text="Tester CreateBeer"
+                Clicked="ButtonTestCreateBeer_Clicked"
+                Style="{StaticResource TestButton}"
+                            />
+
+
+
             <Image
                 Source="brewery.png"
                 HeightRequest="250"
