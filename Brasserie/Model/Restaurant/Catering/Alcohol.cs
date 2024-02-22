@@ -51,7 +51,7 @@ namespace Brasserie.Model.Restaurant.Catering
             set
             {                
                 {
-                    _isNA = true;
+                    _isNA = value;
                 }
             }
         }
