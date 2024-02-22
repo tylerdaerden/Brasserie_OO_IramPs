@@ -47,7 +47,7 @@ namespace Brasserie.Model.Restaurant.Catering
 
         #region Méthode Vérifications
 
-        private bool CheckDrinkVolume(double volume)
+        private static bool CheckDrinkVolume(double volume)
         {
             return volume >= MIN_VOL;
         }

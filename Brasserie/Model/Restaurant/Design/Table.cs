@@ -88,7 +88,7 @@ namespace Brasse.Model.Restaurant.Design
         /// <summary>
         /// Vérification du nombre de Siege supérieur à MIN_Seats
         /// </summary>
-        private bool CheckSeatsNumber(int seatsNumber)
+        private static bool CheckSeatsNumber(int seatsNumber)
         {
             return seatsNumber >= MIN_SEATS;
         }
@@ -96,7 +96,7 @@ namespace Brasse.Model.Restaurant.Design
         /// <summary>
         /// Check de l'id
         /// </summary>
-        private bool CheckIdNumber(int idNumber)
+        private static bool CheckIdNumber(int idNumber)
         {
             return idNumber >= MIN_ID;
         } 
