@@ -28,8 +28,7 @@
                 Text=" Créer mes premières personnes"
                 Clicked="buttonTestCreateFirstPersons_Clicked"
                 Style="{StaticResource TestButton}"
-                />
-            
+                />            
 
             <Button
                x:Name="buttonTestEncapsulation"
@@ -52,7 +51,6 @@
                 Style="{StaticResource TestButton}"
                             />
 
-
             <Button
                 x:Name="ButtonTestCateringClasses"
                 Text="Tester CateringClasses"
@@ -66,7 +64,6 @@
                 Clicked="ButtonTestCollection_Clicked"
                 Style="{StaticResource TestButton}"
                             />
-
 
             <Image
                 Source="brewery.png"
