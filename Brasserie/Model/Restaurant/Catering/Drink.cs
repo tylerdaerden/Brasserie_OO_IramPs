@@ -20,7 +20,8 @@ namespace Brasserie.Model.Restaurant.Catering
 
 
         #region Constructeurs
-        public Drink(string name, string description, int id, double volume , double unitPrice, double vatRate, string pictureName) : base(name, description, id, unitPrice, vatRate, pictureName)
+        public Drink(int id, string name, string description, double unitPrice, string pictureName, double vatRate, double volume)
+            : base(id, name, description, unitPrice, pictureName, vatRate)
         {
             Volume = volume;
         }

@@ -16,9 +16,9 @@ namespace Brasserie.Model.Restaurant.Catering
 
 
         #region Constructeurs
-        public Dish(string name, string description, int id, double unitPrice, double vatRate, string pictureName) : base(name, description, id, unitPrice, vatRate, pictureName)
-        {
 
+        public Dish(int id, string name, string description, double unitPrice, string pictureName, double vatRate) : base(id, name, description, unitPrice, pictureName, vatRate)
+        {
         }
 
         #endregion
@@ -31,8 +31,6 @@ namespace Brasserie.Model.Restaurant.Catering
         #region Methodes 
 
         #endregion
-
-
 
     }
 }

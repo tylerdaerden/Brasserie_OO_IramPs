@@ -28,14 +28,15 @@ namespace Brasserie.Model.Restaurant.Catering
 
         #region Constructeurs
 
-        public Item(string name, string description, int id, double unitPrice, double vatRate, string pictureName)
+        public Item(int id, string name, string description, double unitPrice, string pictureName, double vatRate)
         {
-            Name = name;
+            Id = id; Name = name;
             Description = description;
-            Id = id;
             UnitPrice = unitPrice;
-            VatRate = vatRate;
             PictureName = pictureName;
+            VatRate = vatRate;
+
+
         }
 
         #endregion

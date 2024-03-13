@@ -19,10 +19,10 @@ namespace Brasserie.Model.Restaurant.Catering
 
 
         #region Constructeur
-        public Alcohol(string name, string description, int id, double volume, double percentage, double unitPrice, double vatRate, string pictureName) : base(name, description, id, volume, unitPrice, vatRate, pictureName)
+        public Alcohol(int id, string name, string description, double unitPrice, string pictureName, double vatRate, double volume, double percentage)
+              : base(id, name, description, unitPrice, pictureName, vatRate, volume)
         {
             Percentage = percentage;
-            EvalNA();
         }
 
         #endregion

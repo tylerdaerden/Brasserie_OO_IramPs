@@ -17,10 +17,7 @@ namespace Brasserie.Model.Restaurant.Catering
 
 
         #region Constructeur
-        public Soft(string name, string description, int id, double volume, double unitPrice, double vatRate, string pictureName) : base(name, description, id, volume, unitPrice, vatRate, pictureName)
-        {
-
-        }
+        public Soft(int id, string name, string description, double unitPrice, string pictureName, double vatRate, double volume) : base(id, name, description, unitPrice, pictureName, vatRate, volume) { }
 
         #endregion
 

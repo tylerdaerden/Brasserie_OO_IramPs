@@ -17,10 +17,11 @@ namespace Brasserie.Model.Restaurant.Catering
 
 
         #region Constructeur
-        public Beer(string name, string description, int id, double volume, double percentage, bool isAbbeyBeer , bool isTrappistBeer , double unitPrice, double vatRate, string pictureName) : base(name, description, id, volume, percentage, unitPrice, vatRate, pictureName)
+        public Beer(int id, string name, string description, double unitPrice, string pictureName, double vatRate, double volume, double percentage, bool isTrappistBeer, bool isAbbeyBeer)
+              : base(id, name, description, unitPrice, pictureName, vatRate, volume, percentage)
         {
-            IsAbbeyBeer = isAbbeyBeer ;
-            IsTrappistBeer = isTrappistBeer ;
+            IsTrappistBeer = isTrappistBeer;
+            IsAbbeyBeer = isAbbeyBeer;
         }
         #endregion
 

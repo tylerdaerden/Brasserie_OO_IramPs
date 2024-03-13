@@ -15,11 +15,8 @@ namespace Brasserie.Model.Restaurant.Catering
 
 
         #region Constructeur
-        public Aperitif(string name, string description, int id, double volume, double percentage, double unitPrice, double vatRate, string pictureName) : base(name, description, id, volume, percentage, unitPrice, vatRate, pictureName)
+        public Aperitif(int id, string name, string description, double unitPrice, string pictureName, double vatRate, double volume, double percentage) : base(id, name, description, unitPrice, pictureName, vatRate, volume, percentage)
         {
-
-
-
         }
 
         #endregion
@@ -37,13 +34,6 @@ namespace Brasserie.Model.Restaurant.Catering
 
 
         #endregion
-
-
-
-
-
-
-
 
     }
 }
