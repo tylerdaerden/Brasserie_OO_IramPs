@@ -233,7 +233,7 @@ namespace Brasserie.View
         {
             Soft coca = new Soft(1, name: "Coca cola", "", 3.30, "coca.jpg", 21.0, 25);
             Soft fanta = new Soft(2, name: "Fanta", "", 3.30, "fanta.jpg", 21.0, 25);
-            Beer brassTemps = new Beer(3, name: "Coca cola", "", 3.30, "biere.jpg", 21.0, 25, 6.0, false, false);
+            Beer brassTemps = new Beer(3, name: "Ambrasse Temps", "", 3.30, "biere.jpg", 21.0, 25, 6.0, false, false);
             Dish spaghBolo = new Dish(4, "Spaghetti bolo", "", 15.30, "bolo.jpg", 21.0);
             Soft coca2 = new Soft(5, name: "Coca cola", "", 3.30, "coca.jpg", 21.0, 25);
             ItemsCollection itCol = new ItemsCollection();
