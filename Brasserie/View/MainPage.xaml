@@ -81,6 +81,13 @@
                 Style="{StaticResource TestButton}"
                             />
 
+            <Button
+                x:Name="ButtonExoLambda"
+                Text="Exo Lambda"
+                Clicked="ButtonExoLambda_Clicked"
+                Style="{StaticResource TestButton}"
+                            />
+
             <Image
                 Source="brewery.png"
                 HeightRequest="250"

@@ -66,8 +66,8 @@ namespace Brasserie.View
 
         private void buttonTestCreateItem_Clicked(object sender, EventArgs e)
         {
-            Item trucComestible = new Item( 1 , "chose" , "c'est comestible", 1.70 , "comestible.jpg" , 6.50);
-            Item trucBuvable = new Item(2 , "machin" , "bois" , 1.78 , "buvable.gif" , 6.47);
+            Item trucComestible = new Item(1, "chose", "c'est comestible", 1.70, "comestible.jpg", 6.50);
+            Item trucBuvable = new Item(2, "machin", "bois", 1.78, "buvable.gif", 6.47);
 
             //petit ajout perso (réaction au click sur bouton)
             lblDebug.Text = "Item Crées";
@@ -77,12 +77,12 @@ namespace Brasserie.View
         private void ButtonTestCateringClasses_Clicked(object sender, EventArgs e)
         {
             Item trucComestible = new Item(1, "chose", "c'est comestible", 1.70, "comestible.jpg", 6.50);
-            Drink UnDemiBelge = new Drink(1, "Une50", "Un Demi Facon Belge", 4.81 , "UnDemiBelge.jpg" , 6.07 , 50.00);
-            Dish CarbonnadeAuFaro = new Dish(1, "Carbonnade Au Faro", "Carbonnade Sauce Faro , un délice !",  10.45, "unebonnecarbonnadefieu.jpg", 6.14);
-            Soft RomanCola = new Soft(1,  "Roman Cola", "Cola Made in Belgium", 2.14, "UnbonverredeRomanColaGlacé.png" , 6.12 , 33.45);
-            Alcohol EauDeVillee = new Alcohol(1,  "Eau de Villée", "Eau de vie de Biercée ",  6.15, "eaudeVillée.jpg", 7.14,  6.15, 31.25);
-            Aperitif MojitoRoyal = new Aperitif(1, "Mojito Royal", "Cocktail Mojito avec ajout de Champagne",10.21, "mojitoroyal.png ", 15.21, 45.12, 21.78);
-            Beer Orval = new Beer(1, "Orval", "Biere trappiste Orval",  25.11, "Unbonverredorval.jpg", 8.01,  5.45, 21.14, false, true);
+            Drink UnDemiBelge = new Drink(1, "Une50", "Un Demi Facon Belge", 4.81, "UnDemiBelge.jpg", 6.07, 50.00);
+            Dish CarbonnadeAuFaro = new Dish(1, "Carbonnade Au Faro", "Carbonnade Sauce Faro , un délice !", 10.45, "unebonnecarbonnadefieu.jpg", 6.14);
+            Soft RomanCola = new Soft(1, "Roman Cola", "Cola Made in Belgium", 2.14, "UnbonverredeRomanColaGlacé.png", 6.12, 33.45);
+            Alcohol EauDeVillee = new Alcohol(1, "Eau de Villée", "Eau de vie de Biercée ", 6.15, "eaudeVillée.jpg", 7.14, 6.15, 31.25);
+            Aperitif MojitoRoyal = new Aperitif(1, "Mojito Royal", "Cocktail Mojito avec ajout de Champagne", 10.21, "mojitoroyal.png ", 15.21, 45.12, 21.78);
+            Beer Orval = new Beer(1, "Orval", "Biere trappiste Orval", 25.11, "Unbonverredorval.jpg", 8.01, 5.45, 21.14, false, true);
 
             lblDebug.Text = "instanciation des 7 classes faites ! ";
         }
@@ -129,6 +129,54 @@ namespace Brasserie.View
             lblDebug.Text = s;
 
         }
+
+        private void ButtonExoLambda_Clicked(object sender, EventArgs e)
+        {
+
+            ObservableCollection<StaffMember> staff = new ObservableCollection<StaffMember>();
+            staff.Add(new StaffMember(1, "Dutrieu", "Pierre", true, "dutrieur@gmail.com", "0498345678", "BE45 6781 2345 2490", "4, rue de la coupe 7000Mons", 34000));
+            staff.Add(new StaffMember(2, "Lalande", "Vanessa", false, "", "0485667098", "BE806581 1145 3496", "16, rue de la loi 7080 Nivelles", 32500));
+            staff.Add(new Manager(3, "Jenlain", "Fabienne", false, "jenfab23@gmail.com", "0478901322", "BE80 4394 7739 1234", "13, rue de Mons 6000 Beaumont", 59000, "Password01"));
+            staff.Add(new StaffMember(4, "Baulieu", "Jean", true, "", "", "BE23 1189 1390 1193", "5, rue des tilleus 7030 Ghlin", 36500));
+            staff.Add(new StaffMember(5, "Gerardin", "Isabelle", false, "", "0475671038", "BE801782 4490 9113", "120, rue des drapiers 7000 Mons", 41000));
+            staff.Add(new Manager(6, "Balkan", "Fred", true, "balkan@gmail.com", "0479001280", "BE89 1190 1127 2280", "10, rue grande 6340 Nimy", 54000, "TrucMachin01"));
+            staff.Add(new StaffMember(7, "Gutierez", "Manolo", true, "manolo140@gmail.com", "0498671011", "BE70 9012 1034 1931", "8, rue de la riviere 7000 Mons", 29800));
+
+
+            int EmplyeesNumber = staff.Count();
+            bool allHaveMobile = staff.All(s => !string.IsNullOrEmpty(s.MobilePhoneNumber));
+
+            //Est-ce qu’il y a un membre injoignable, qui n’a pas de N° de téléphone ni d’Email renseignés ?
+            bool isSomeoneUnjoinable = staff.Any(s => string.IsNullOrEmpty(s.MobilePhoneNumber) && string.IsNullOrEmpty(s.Email));
+
+            //Le premier membre (celui du c)) (sa référence) qui n’a pas de N° de téléphone ni d’Email renseignés
+            StaffMember firstUnJoingnable = staff.FirstOrDefault(s => string.IsNullOrEmpty(s.MobilePhoneNumber) && string.IsNullOrEmpty(s.Email));
+
+            //La collection des employés n’ayant pas d’email renseigné.
+            ObservableCollection<StaffMember> employeWithNoMail = new ObservableCollection<StaffMember>(staff.Where(s => string.IsNullOrEmpty(s.Email)));
+
+            //La collection des employées(de genre féminin).
+            ObservableCollection<StaffMember> womens = new ObservableCollection<StaffMember>(staff.Where(s => !s.Gender));
+
+            //La collection des employés résidant à Mons.
+            ObservableCollection<StaffMember> liveInMons = new ObservableCollection<StaffMember>(staff.Where(s => !string.IsNullOrEmpty(s.Address) && s.Address.Contains("7000")));
+            // La collection des managers
+            ObservableCollection<StaffMember> onlyManagers = new ObservableCollection<StaffMember>(staff.OfType<Manager>());
+            //La collection des employés triés par ordre alphabétique de nom de famille.
+            ObservableCollection<StaffMember> orderByNameAsc = new ObservableCollection<StaffMember>(staff.OrderBy(s => s.LastName));
+            //Le pourcentage d’hommes dans le personnel (en une seule ligne de code).
+            double pourcentMen = (100 * staff.Count(s => s.Gender)) / staff.Count;
+            //Les employés par ordre croissant de salaire.
+            //Pas possible depuis la main page car la prop Salary est protected 
+
+            lblDebug.Text = "Exo effectué";
+
+        }
+
+
+
+
+
     }
 
 
