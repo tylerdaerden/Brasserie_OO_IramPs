@@ -37,7 +37,7 @@
                 Text=" Créer mes premières personnes"
                 Clicked="buttonTestCreateFirstPersons_Clicked"
                 Style="{StaticResource TestButton}"
-                />            
+                />
 
             <Button
                x:Name="buttonTestEncapsulation"
@@ -82,9 +82,23 @@
                             />
 
             <Button
+                x:Name="buttonTestLambdasOnCollection"
+                Text="Test Lambdas"
+                Clicked="buttonTestLambdasOnCollection_Clicked"
+                Style="{StaticResource TestButton}"
+                            />
+
+            <Button
                 x:Name="ButtonExoLambda"
                 Text="Exo Lambda"
                 Clicked="ButtonExoLambda_Clicked"
+                Style="{StaticResource TestButton}"
+                            />
+
+            <Button
+                x:Name="ButtonTestItemsCollection"
+                Text="TestItemCollection"
+                Clicked="ButtonTestItemsCollection_Clicked"
                 Style="{StaticResource TestButton}"
                             />
 

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Brasserie.Model.Restaurant.Catering
 {
-    class Aperitif : Alcohol
+    public class Aperitif : Alcohol
     {
         #region Attributs
 

@@ -105,6 +105,8 @@ namespace Brasserie.View
             lblDebug.Text = s;
         }
 
+
+
         private void ButtonTestOrder_Clicked(object sender, EventArgs e)
         {
             Order ord = new Order();
@@ -129,6 +131,60 @@ namespace Brasserie.View
             lblDebug.Text = s;
 
         }
+
+        private void buttonTestLambdasOnCollection_Clicked(object sender, EventArgs e)
+        {
+            ObservableCollection<Drink> drinks = new ObservableCollection<Drink>();
+
+            drinks.Add(new Soft(1, name: "Coca 25", "", 3.30, "coca.jpg" , 21.0, 25));
+            drinks.Add(new Soft(2, name: "Fanta 25", "", 3.30, "fanta.jpg", 21.0, 25));
+            drinks.Add(new Soft(3, name: "Coca 33", "", 4.20, "coca.jpg", 21.0, 33));
+            drinks.Add(new Soft(4, name: "Fanta 33", "", 4.20, "fanta.jpg", 21.0, 33));
+            drinks.Add(new Soft(5, name: "Water 25cl", "", 3.10, "water25.jpg", 21.0, 25));
+            drinks.Add(new Soft(6, name: "Water 50cl", "", 5.50, "water.jpg", 21.0, 50));
+            drinks.Add(new Soft(7, name: "Water 1L", "", 7.00, "water.jpg", 21.0, 100));
+            drinks.Add(new Soft(8, name: "Coca Zero", "", 3.50, "coca.jpg", 21.0, 25));
+            drinks.Add(new Soft(9, name: "IceTea Zero", "", 3.50, "coca.jpg", 21.0, 25));
+            drinks.Add(new Beer(10, name: "Ambrasse Temps 25", "", 4.20, "amb25.jpg", 21.0, 25, 6.00, false, false));
+            drinks.Add(new Beer(11, name: "Troll 25", "", 4.20, "troll25.jpg" , 21.0, 25.00, 5.50, false, false));
+
+            // match Criteria ?;
+            bool boolResult;
+            boolResult = drinks.All(d => d.UnitPrice < 5.00);//all elements respect the criteria ?
+            boolResult = drinks.Any(d => d.UnitPrice >= 6.00);//exist at least one element that respect the criteria
+
+            //sorted collections
+            ObservableCollection<Drink> orderByNameDesc = new
+            ObservableCollection<Drink>(drinks.OrderByDescending(d => d.Name));
+            ObservableCollection<Drink> orderByUnitPriceAsc = new
+            ObservableCollection<Drink>(drinks.OrderBy(d => d.UnitPrice));
+
+            //collection with selection
+            ObservableCollection<Drink> select25Cl = new
+            ObservableCollection<Drink>(drinks.Where(d => d.Volume == 25.00));
+            ObservableCollection<Drink> waters = new ObservableCollection<Drink>(drinks.Where(d
+            => d.Name.Contains("Water")));
+            ObservableCollection<Drink> beers = new
+            ObservableCollection<Drink>(drinks.OfType<Beer>());
+
+            //find element with one or more (logical expression) criteria
+            Drink coca33 = drinks.First(d => d.Name.Contains("Coca 33"));
+            Drink d = drinks.First(d => d.Volume > 25.00 && d.PictureName.EndsWith(".jpg"));
+
+            //build new list from another collection
+            List<string> s = drinks.Select(d =>
+            $"{d.Id};{d.Name};{d.Description};{d.UnitPrice};{d.Volume}").ToList();
+
+            //compute
+            double maxUnitPrice = drinks.Max(d => d.UnitPrice);
+            double average = drinks.Average(d => d.UnitPrice);
+            double sum = drinks.Sum(d => d.UnitPrice);
+
+            //do something foreach element
+            drinks.ToList().ForEach(d => d.VatRate = 22.0);
+        }
+
+
 
         private void ButtonExoLambda_Clicked(object sender, EventArgs e)
         {
@@ -173,10 +229,23 @@ namespace Brasserie.View
 
         }
 
+        private void ButtonTestItemsCollection_Clicked(object sender, EventArgs e)
+        {
+            Soft coca = new Soft(1, name: "Coca cola", "", 3.30, "coca.jpg", 21.0, 25);
+            Soft fanta = new Soft(2, name: "Fanta", "", 3.30, "fanta.jpg", 21.0, 25);
+            Beer brassTemps = new Beer(3, name: "Coca cola", "", 3.30, "biere.jpg", 21.0, 25, 6.0, false, false);
+            Dish spaghBolo = new Dish(4, "Spaghetti bolo", "", 15.30, "bolo.jpg", 21.0);
+            Soft coca2 = new Soft(5, name: "Coca cola", "", 3.30, "coca.jpg", 21.0, 25);
+            ItemsCollection itCol = new ItemsCollection();
+            itCol.AddItem(coca);
+            itCol.AddItem(fanta);
+            itCol.AddItem(brassTemps);
+            itCol.AddItem(spaghBolo);
+            itCol.AddItem(coca2);//test to add an item who have the same name as another already in the list
+            itCol.DeleteItem(brassTemps);//delete one item
+            itCol.IndexPrices(5.00); //index 5% all prices
 
-
-
-
+        }
     }
 
 
