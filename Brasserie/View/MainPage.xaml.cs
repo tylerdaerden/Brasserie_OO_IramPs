@@ -2,6 +2,7 @@
 using Brasserie.Model.Restaurant.Activity;
 using Brasserie.Model.Restaurant.Catering;
 using Brasserie.Model.Restaurant.People;
+
 //using Phase;
 using System.Collections.ObjectModel;
 
@@ -271,6 +272,48 @@ namespace Brasserie.View
             s += $"\nPourcentage occasionels : {cuscoll.OccasionalCustomersPercentage}";
             s += $"\nPourcentage réguliers : {cuscoll.RegularCustomersPercentage}";
             lblDebug.Text = s;
+
+
+        }
+
+        private void ButtonTestReadWriteTextFileWithList_Clicked(object sender, EventArgs e)
+        {
+            //chemin pour tour ↓↓
+            string csvFilePath = @"D:\Code et Dev\Code & Développement\001 Bac Informatique\2023-2024\0 POO\MAUI Projects\Brasserie\Configuration\Datas\Csv\Persons.csv";
+            //chemin pour portable ↓↓
+            //à mettre later
+            List<string> personsList = new List<string>();//create empty collection of string
+            personsList = File.ReadAllLines(csvFilePath).ToList(); // copy each line in the collection
+            string s = "";
+            foreach (string line in personsList)
+            {
+                s += $"\n{line}";
+            }
+            lblDebug.Text = s; //print collection's content
+                               //Add persons to collection.
+            personsList.Add("Customer;10;Maggi;Toni;true;maggiton@gmail.com;0491609830;Occasional");
+            personsList.Add("Customer;11;Fernez;Jean;true;jeanfernez@gmail.com;0480458801;Regular");
+            //write all lines in a new csv file.
+            //chemin pour tour ↓↓
+            File.WriteAllLines(@"D:\Code et Dev\Code & Développement\001 Bac Informatique\2023-2024\0 POO\MAUI Projects\Brasserie\Configuration\Datas\Csv\PersonsRewrite.csv", personsList);
+            //chemin pour portable ↓↓
+            //à mettre later
+
+
+        }
+
+        private void ButtonTestPolymorphism_Clicked(object sender, EventArgs e)
+        {
+            Beer brasseTemps = new Beer(3, name: "Brasse Temps", "", 3.30, "biere.jpg", 21.0, 25, 6.0, false, false);
+            Alcohol al = brasseTemps;
+            Drink d = brasseTemps;
+            Item it = brasseTemps;
+
+            //brasseTemps = it;
+
+            lblDebug.Text = it.GetType().ToString();
+
+            Beer b = (Beer)it;
 
 
         }

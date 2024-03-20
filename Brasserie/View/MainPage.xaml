@@ -109,6 +109,21 @@
                 Style="{StaticResource TestButton}"
                             />
 
+            <Button
+                x:Name="ButtonTestReadWriteTextFileWithList"
+                Text="ButtonTestReadWriteTextFileWithList"
+                Clicked="ButtonTestReadWriteTextFileWithList_Clicked"
+                Style="{StaticResource TestButton}"
+                            />
+
+            <Button
+                x:Name="ButtonTestPolymorphism"
+                Text="ButtonTestPolymorphism"
+                Clicked="ButtonTestPolymorphism_Clicked"
+                Style="{StaticResource TestButton}"
+                            />
+
+
             <Image
                 Source="brewery.png"
                 HeightRequest="250"
