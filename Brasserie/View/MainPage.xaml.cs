@@ -2,6 +2,7 @@
 using Brasserie.Model.Restaurant.Activity;
 using Brasserie.Model.Restaurant.Catering;
 using Brasserie.Model.Restaurant.People;
+//using Phase;
 using System.Collections.ObjectModel;
 
 namespace Brasserie.View
@@ -244,6 +245,33 @@ namespace Brasserie.View
             itCol.AddItem(coca2);//test to add an item who have the same name as another already in the list
             itCol.DeleteItem(brassTemps);//delete one item
             itCol.IndexPrices(5.00); //index 5% all prices
+
+            lblDebug.Text = "Collection Item crée";
+
+        }
+
+        private void ButtonTestCustomerCollection_Clicked(object sender, EventArgs e)
+        {
+           
+            Customer riri = new Customer(1, "Duck", "Riri", true, "riri@disney.com", "555-897", Customer.CustomerType.New);
+            Customer fifi = new Customer(2, "Duck", "Fifi", true, "fifi@disney.com", "555-898", Customer.CustomerType.Occasional);
+            Customer loulou = new Customer(3, "Duck", "Loulou", true, "loulou@disney.com", "555-899", Customer.CustomerType.Regular);
+            Customer zaza = new Customer(4, "Duck", "Zaza", false, "zaza@disney.com", "555-900", Customer.CustomerType.Regular);
+
+            CustomersCollection cuscoll = new CustomersCollection();
+
+            cuscoll.AddCustomer(riri);
+            cuscoll.AddCustomer(fifi);
+            cuscoll.AddCustomer(loulou);
+            cuscoll.AddCustomer(zaza);
+
+            string s = "";
+            s = $"nombre de clients : {cuscoll.Count}";
+            s += $"\nPourcentage nouveaux : {cuscoll.NewCustomersPercentage}";
+            s += $"\nPourcentage occasionels : {cuscoll.OccasionalCustomersPercentage}";
+            s += $"\nPourcentage réguliers : {cuscoll.RegularCustomersPercentage}";
+            lblDebug.Text = s;
+
 
         }
     }

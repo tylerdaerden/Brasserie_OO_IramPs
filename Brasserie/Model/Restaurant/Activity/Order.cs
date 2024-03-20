@@ -27,15 +27,24 @@ namespace Brasserie.Model.Restaurant.Activity
 
     public class Order
     {
+        #region Attributs
         private ObservableCollection<OrderItem> _orderItems;
         private int _id;
         private double _totalPrice = 0.0;
         private double _totalVatCost = 0.0;
         private bool _toGo = false;
+        #endregion
+
+        #region Constructeurs
         public Order()
         {
             OrderItems = new ObservableCollection<OrderItem>();
         }
+        #endregion
+
+
+        #region Propriétés
+
         /// <summary>
         /// Collection of OrderItems : ex 2 coca cola, 3 spaghettis bolognaise, ...
         /// </summary>
@@ -88,6 +97,12 @@ namespace Brasserie.Model.Restaurant.Activity
             get => _toGo;
             set => _toGo = value;
         }
+        #endregion
+
+
+
+        #region Méthodes
+
         /// <summary>
         /// Compute Total price at this time and for this meal, Sum of all orderItems Prices
         /// </summary>
@@ -126,7 +141,10 @@ namespace Brasserie.Model.Restaurant.Activity
         public void PrintTicket()
         {
             //not implemented for now
-        }
+        } 
+        #endregion
+
+
     }//end Order class
 
 
