@@ -95,6 +95,23 @@ namespace Brasserie.Model.Restaurant.People
 
         }
 
+        /// <summary>
+        /// For Staff Member wage calculation is very simple → return Salary . 
+        /// </summary>
+        /// <returns></returns>
+        public virtual double WageCalculation()
+        {
+            return Salary;
+        }
+
+        /// <summary>
+        /// get main informations of this staff member
+        /// </summary>
+        public string GetMainInformations()
+        {
+            return $"{FirstName} {LastName} Mobile : {MobilePhoneNumber} Address : {Address}";
+        }
+
         #endregion
 
 

@@ -123,6 +123,13 @@
                 Style="{StaticResource TestButton}"
                             />
 
+            <Button
+                x:Name="ButtonTestNew"
+                Text="ButtonTestNew"
+                Clicked="ButtonTestNew_Clicked"
+                Style="{StaticResource TestButton}"
+                            />
+
 
             <Image
                 Source="brewery.png"

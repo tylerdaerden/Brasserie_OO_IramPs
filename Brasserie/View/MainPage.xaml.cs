@@ -279,9 +279,9 @@ namespace Brasserie.View
         private void ButtonTestReadWriteTextFileWithList_Clicked(object sender, EventArgs e)
         {
             //chemin pour tour ↓↓
-            string csvFilePath = @"D:\Code et Dev\Code & Développement\001 Bac Informatique\2023-2024\0 POO\MAUI Projects\Brasserie\Configuration\Datas\Csv\Persons.csv";
+            //string csvFilePath = @"D:\Code et Dev\Code & Développement\001 Bac Informatique\2023-2024\0 POO\MAUI Projects\Brasserie\Configuration\Datas\Csv\Persons.csv";
             //chemin pour portable ↓↓
-            //à mettre later
+            string csvFilePath = "C:\\Users\\denys\\Desktop\\POO\\MAUI Projects\\Brasserie\\Brasserie\\Configuration\\Datas\\Csv\\Persons.csv";
             List<string> personsList = new List<string>();//create empty collection of string
             personsList = File.ReadAllLines(csvFilePath).ToList(); // copy each line in the collection
             string s = "";
@@ -295,9 +295,9 @@ namespace Brasserie.View
             personsList.Add("Customer;11;Fernez;Jean;true;jeanfernez@gmail.com;0480458801;Regular");
             //write all lines in a new csv file.
             //chemin pour tour ↓↓
-            File.WriteAllLines(@"D:\Code et Dev\Code & Développement\001 Bac Informatique\2023-2024\0 POO\MAUI Projects\Brasserie\Configuration\Datas\Csv\PersonsRewrite.csv", personsList);
+            //File.WriteAllLines(@"D:\Code et Dev\Code & Développement\001 Bac Informatique\2023-2024\0 POO\MAUI Projects\Brasserie\Configuration\Datas\Csv\PersonsRewrite.csv", personsList);
             //chemin pour portable ↓↓
-            //à mettre later
+            File.WriteAllLines(@"C:\\Users\\denys\\Desktop\\POO\\MAUI Projects\\Brasserie\\Brasserie\\Configuration\\Datas\\Csv\\PersonsRewrite.csv", personsList);
 
 
         }
@@ -317,6 +317,29 @@ namespace Brasserie.View
 
 
         }
+
+        private void ButtonTestNew_Clicked(object sender, EventArgs e)
+        {
+            StaffMember Lalande = new StaffMember(2, "Lalande", "Vanessa", false, "", "0485667098", "BE80 6581 1145 3496", "16, rue de la loi 7080 Nivelles", 4000);
+            Manager Jenlain = new Manager(3, "Jenlain", "Fabienne", false, "jenfab23@gmail.com", "0478901322", "BE80 4394 7739 1234", "13, rue de Mons 6000 Beaumont", 4000, "Password01");
+            lblDebug.Text = $"\n Calcul du salaire depuis une référence de StaffMember pour {Lalande.LastName} : {Lalande.WageCalculation()}";
+            lblDebug.Text = $"\n Calcul du salaire depuis une référence de Manager pour {Jenlain.LastName} : {Jenlain.WageCalculation()}";
+
+            ObservableCollection<StaffMember> staff = new ObservableCollection<StaffMember>();
+            staff.Add(Lalande);
+            staff.Add(Jenlain);
+            staff.ToList().ForEach(s => lblDebug.Text += $"\n Salaire de {s.LastName} de type {s.GetType()}: {s.WageCalculation()}");
+
+            staff.ToList().ForEach(s => lblDebug.Text += $"\n {s.GetMainInformations()}");
+            lblDebug.Text += $"\n A partir d'une ref de type Manager pour {Jenlain.LastName} cela donne : \n{Jenlain.GetMainInformations()}";
+
+        }
+
+
+
+
+
+
     }
 
 

@@ -8,3 +8,5 @@ StaffMember;6;Renard;Fred;true;fredrenard01@gmail.com;496789034;;BE90 3456 7892 
 Manager;7;Tarne;Isabelle;false;isablletarne@gmail.com;487569901;;BE84 5454 6780 1243;89, chemin vert 7030 Baudour;5234;Password01
 Customer;10;Maggi;Toni;true;maggiton@gmail.com;0491609830;Occasional
 Customer;11;Fernez;Jean;true;jeanfernez@gmail.com;0480458801;Regular
+Customer;10;Maggi;Toni;true;maggiton@gmail.com;0491609830;Occasional
+Customer;11;Fernez;Jean;true;jeanfernez@gmail.com;0480458801;Regular
