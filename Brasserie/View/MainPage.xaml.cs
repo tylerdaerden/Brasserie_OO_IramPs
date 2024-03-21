@@ -33,14 +33,14 @@ namespace Brasserie.View
 
         private void buttonTestCreateFirstPersons_Clicked(object sender, EventArgs e)
         {
-            Person firstPerson = new Person(id: 1, lastName: "Beumier", firstName: "Damien", gender: true, email: "dambeumier@gmail.com", mobilePhoneNumber: "0489142293");
-            Person secondPerson = new Person(id: 2, lastName: "Deroisin", firstName: "Sophie", gender: false, email: "sophiederoisin@gmail.com", mobilePhoneNumber: "0473121314");
-            Person thirdPerson = new Person(3, "Jandrin", "Marc", true, "jandrinmarc@gmail.com", mobilePhoneNumber: "0485556678");
-            Person fourthPerson = new Person(4, "Lupant", "Sebasien");
-            Person fifthPerson = new Person();
+            //Person firstPerson = new Person(id: 1, lastName: "Beumier", firstName: "Damien", gender: true, email: "dambeumier@gmail.com", mobilePhoneNumber: "0489142293");
+            //Person secondPerson = new Person(id: 2, lastName: "Deroisin", firstName: "Sophie", gender: false, email: "sophiederoisin@gmail.com", mobilePhoneNumber: "0473121314");
+            //Person thirdPerson = new Person(3, "Jandrin", "Marc", true, "jandrinmarc@gmail.com", mobilePhoneNumber: "0485556678");
+            //Person fourthPerson = new Person(4, "Lupant", "Sebasien");
+            //Person fifthPerson = new Person();
 
             //petit ajout perso (réaction au click sur bouton)
-            lblDebug.Text = "Personnes Crées";
+            lblDebug.Text = "CODE DEPRECIE !!! (Personnes Crées)";
 
             //Person p;
             //p = new Person(6, "Tardif", "Jean");
@@ -51,9 +51,9 @@ namespace Brasserie.View
 
         private void buttonTestEncapsulation_Clicked(object sender, EventArgs e)
         {
-            Person p = new Person(id: 2, lastName: "Deroisin", firstName: "Sophie", gender: false, email: "sophiederoisin@gmail.com", mobilePhoneNumber: "0473121314");
-            p.FirstName = "Marie-Sophie";
-            lblDebug.Text = p.FirstName;
+            //Person p = new Person(id: 2, lastName: "Deroisin", firstName: "Sophie", gender: false, email: "sophiederoisin@gmail.com", mobilePhoneNumber: "0473121314");
+            //p.FirstName = "Marie-Sophie";
+            lblDebug.Text = "CODE DEPRECIE";
 
         }
 
@@ -68,17 +68,17 @@ namespace Brasserie.View
 
         private void buttonTestCreateItem_Clicked(object sender, EventArgs e)
         {
-            Item trucComestible = new Item(1, "chose", "c'est comestible", 1.70, "comestible.jpg", 6.50);
-            Item trucBuvable = new Item(2, "machin", "bois", 1.78, "buvable.gif", 6.47);
+            //Item trucComestible = new Item(1, "chose", "c'est comestible", 1.70, "comestible.jpg", 6.50);
+            //Item trucBuvable = new Item(2, "machin", "bois", 1.78, "buvable.gif", 6.47);
 
             //petit ajout perso (réaction au click sur bouton)
-            lblDebug.Text = "Item Crées";
+            lblDebug.Text = "CODE DEPRECIE !!! (Item Crées)";
         }
 
 
         private void ButtonTestCateringClasses_Clicked(object sender, EventArgs e)
         {
-            Item trucComestible = new Item(1, "chose", "c'est comestible", 1.70, "comestible.jpg", 6.50);
+            //Item trucComestible = new Item(1, "chose", "c'est comestible", 1.70, "comestible.jpg", 6.50);
             Drink UnDemiBelge = new Drink(1, "Une50", "Un Demi Facon Belge", 4.81, "UnDemiBelge.jpg", 6.07, 50.00);
             Dish CarbonnadeAuFaro = new Dish(1, "Carbonnade Au Faro", "Carbonnade Sauce Faro , un délice !", 10.45, "unebonnecarbonnadefieu.jpg", 6.14);
             Soft RomanCola = new Soft(1, "Roman Cola", "Cola Made in Belgium", 2.14, "UnbonverredeRomanColaGlacé.png", 6.12, 33.45);

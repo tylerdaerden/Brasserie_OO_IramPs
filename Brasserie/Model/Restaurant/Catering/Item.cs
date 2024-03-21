@@ -10,7 +10,7 @@ namespace Brasserie.Model.Restaurant.Catering
 {
     #region Attributs    
 
-    public class Item
+    public abstract class Item
     {
         //constantes
         const int MINCHAR_NAME = 2;
@@ -121,6 +121,20 @@ namespace Brasserie.Model.Restaurant.Catering
         }
 
         #endregion
+
+        #region Methodes
+
+
+
+
+        #endregion
+
+        /// <summary>
+        /// generate auto description of this item
+        /// </summary>
+        /// <returns>auto description</returns> 
+        public abstract string AutoDescription();
+
 
         #region Méthodes Vérifications
 

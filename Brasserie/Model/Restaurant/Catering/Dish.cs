@@ -30,6 +30,14 @@ namespace Brasserie.Model.Restaurant.Catering
 
         #region Methodes 
 
+        /// <summary>
+        /// Auto Description for this Dish
+        /// </summary>
+        public override string AutoDescription()
+        {
+            return $"{Name} - {Description} au prix de {UnitPrice}";
+        }
+
         #endregion
 
     }

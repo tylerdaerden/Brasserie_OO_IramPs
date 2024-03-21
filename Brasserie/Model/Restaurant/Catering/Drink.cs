@@ -46,12 +46,28 @@ namespace Brasserie.Model.Restaurant.Catering
 
         #endregion
 
+        #region Methodes
+
+        /// <summary>
+        /// Auto Description for this Drink
+        /// </summary>
+        public override string AutoDescription()
+        {
+            return $"{Name} {Volume} cl, {Description} au prix de {UnitPrice}";
+        }
+
+        #endregion
+
+
+
         #region Méthode Vérifications
 
         private static bool CheckDrinkVolume(double volume)
         {
             return volume >= MIN_VOL;
         }
+
+
 
         #endregion
 

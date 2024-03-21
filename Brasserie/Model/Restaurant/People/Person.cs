@@ -9,7 +9,7 @@ namespace Brasserie.Model.Restaurant.People
 {
     //#nullable disable
 
-    public class Person
+    public abstract class Person
     {
         #region Attributs
 
