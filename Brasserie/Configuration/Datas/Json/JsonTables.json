@@ -1,0 +1,83 @@
+{
+  "$type": "Brasserie.Model.Restaurant.Design.TablesCollection, Brasserie",
+  "$values": [
+    {
+      "$type": "Brasserie.Model.Restaurant.Design.Table, Brasserie",
+      "IdNumber": 1,
+      "SeatsNumber": 2
+    },
+    {
+      "$type": "Brasserie.Model.Restaurant.Design.Table, Brasserie",
+      "IdNumber": 2,
+      "SeatsNumber": 4
+    },
+    {
+      "$type": "Brasserie.Model.Restaurant.Design.Table, Brasserie",
+      "IdNumber": 3,
+      "SeatsNumber": 2
+    },
+    {
+      "$type": "Brasserie.Model.Restaurant.Design.Table, Brasserie",
+      "IdNumber": 4,
+      "SeatsNumber": 6
+    },
+    {
+      "$type": "Brasserie.Model.Restaurant.Design.Table, Brasserie",
+      "IdNumber": 5,
+      "SeatsNumber": 4
+    },
+    {
+      "$type": "Brasserie.Model.Restaurant.Design.Table, Brasserie",
+      "IdNumber": 6,
+      "SeatsNumber": 2
+    },
+    {
+      "$type": "Brasserie.Model.Restaurant.Design.Table, Brasserie",
+      "IdNumber": 7,
+      "SeatsNumber": 2
+    },
+    {
+      "$type": "Brasserie.Model.Restaurant.Design.Table, Brasserie",
+      "IdNumber": 8,
+      "SeatsNumber": 2
+    },
+    {
+      "$type": "Brasserie.Model.Restaurant.Design.Table, Brasserie",
+      "IdNumber": 9,
+      "SeatsNumber": 4
+    },
+    {
+      "$type": "Brasserie.Model.Restaurant.Design.Table, Brasserie",
+      "IdNumber": 10,
+      "SeatsNumber": 4
+    },
+    {
+      "$type": "Brasserie.Model.Restaurant.Design.Table, Brasserie",
+      "IdNumber": 11,
+      "SeatsNumber": 2
+    },
+    {
+      "$type": "Brasserie.Model.Restaurant.Design.Table, Brasserie",
+      "IdNumber": 12,
+      "SeatsNumber": 6
+    },
+    {
+      "$type": "Brasserie.Model.Restaurant.Design.Table, Brasserie",
+      "IdNumber": 13,
+      "SeatsNumber": 2
+    },
+    {
+      "$type": "Brasserie.Model.Restaurant.Design.Table, Brasserie",
+      "IdNumber": 14,
+      "SeatsNumber": 2
+    },
+    {
+      "$type": "Brasserie.Model.Restaurant.Design.Table, Brasserie",
+      "IdNumber": 15,
+      "SeatsNumber": 4
+    }
+  ]
+}
+
+
+    

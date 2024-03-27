@@ -35,8 +35,6 @@ namespace Brasserie.Model.Restaurant.Catering
             UnitPrice = unitPrice;
             PictureName = pictureName;
             VatRate = vatRate;
-
-
         }
 
         #endregion

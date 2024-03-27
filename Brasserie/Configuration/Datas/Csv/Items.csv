@@ -1,0 +1,15 @@
+Type;Id;Name;Description;UnitPrice;PictureName;VatRate;Volume;Percentage;IsTrappist;IsAbbeyBeer
+DISH;1;Spaghettis bolognaise;pâtes sauce tomate et viande hachée;17,5;spaghbolo.jpg;21;;;;
+DISH;2;Penne arrabiata;pâtes sauce tomate pimentée;18;pennes_arrabiata.jpg;21;;;;
+DISH;3;Spahhettis carbonara;pâtes sauce crème lardons et oeuf;18,5;spaghetti_carbonara.jpg;21;;;;
+DISH;4;Penne quatre fromages;pâtes sauce et fromages;18,5;pennes_4fromages.jpg;21;;;;
+SOFT;8;Coca Cola;Boisson rafraichissante aux extraits de vegetaux;3,4;cocacola25.jpg;21;25;;;
+SOFT;9;Schwepps Tonic;Boisson pétillante au citron;3,6;schwepps_tonic25.jpg;21;25;;;
+SOFT;10;Sprite;Boisson pétillante aux extraits de citron;3,6;sprite25.jpg;21;25;;;
+SOFT;11;Fanta;Boisson pétillante aux extraits d'orange;3,6;fanta25.jpg;21;25;;;
+APERITIF;16;Porto Rouge;Apéritif sucré;5,8;porto.jpg;21;12;14;;
+APERITIF;17;Kirr;Apéritif fruité;5,8;porto.jpg;21;12;13,5;;
+BEER;18;Bush Caractere 12,5;bière brassée sur place;2,7;buschcaractere125.jpg;21;12,5;10;true;true
+BEER;19;Bush Triple 12,5;bière brassée sur place;2,7;BuschTriple125.jpg;21;12,5;10,5;false;false
+BEER;20;Bush Triple 25;bière brassée sur place;5,2;BuschTriple25.jpg;21;25;10,5;false;false
+BEER;21;Bush Ambrée 25;bière brassée sur place;4,5;bush_ambree25.jpg;21;25;10,5;false;false

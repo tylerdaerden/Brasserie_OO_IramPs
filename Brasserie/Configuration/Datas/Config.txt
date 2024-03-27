@@ -1,0 +1,4 @@
+FOLDER,C:\Cours\IRAM PS\ISA\ISA D\POO\MAUI Projects\Brasserie\Configuration\Datas\Csv\
+ITEMS,Items.csv
+TABLES,Tables.csv
+PEOPLE,Persons.csv
