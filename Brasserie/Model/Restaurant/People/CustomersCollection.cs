@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
+using System.Net;
+using System.Net.Mail;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -16,7 +19,7 @@ namespace Brasserie.Model.Restaurant.People
         /// Add customer to the collection
         /// </summary>
         /// <param name="c"></param>
-        public void AddCustomer(Customer c)
+        public  void AddCustomer(Customer c) 
         {
             if (this.Count == 0 || !this.Any(CustomerInTheCollection => CustomerInTheCollection.Id == c.Id || (CustomerInTheCollection.LastName == c.LastName && CustomerInTheCollection.FirstName == c.FirstName)))
             {
@@ -48,10 +51,10 @@ namespace Brasserie.Model.Restaurant.People
         /// </summary>
         /// <param name="type"></param>
         /// <returns></returns>
-        public double ComputeTypePercentage(Customer.CustomerType type)
+        public double ComputeTypePercentage(Customer.CustomerType type) 
         {   //this.Count -> total customers number
             int countType = this.Count(c => c.Type == type);//numbers of customers of searched type
-
+       
             return Count != 0 ? 100.0 * ((double)countType / Count) : 0.0;
 
         }
@@ -59,12 +62,13 @@ namespace Brasserie.Model.Restaurant.People
         /// <summary>
         /// send email to all customers
         /// </summary>
-        public void SendPromotionalEmail()
+         public void SendPromotionalEmail()
         {
             //not implemented  voir OAuth 2.0 pour l'autorisation  à un compte gmail.
         }
 
     }//end CustomersCollection Class
 
-}
 
+    
+}

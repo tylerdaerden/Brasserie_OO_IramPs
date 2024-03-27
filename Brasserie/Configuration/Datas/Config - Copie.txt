@@ -1,0 +1,4 @@
+FOLDER,C:\\Users\\denys\\Desktop\\POO\\MAUI Projects\\Brasserie\\Brasserie\\Configuration\\Datas\\Csv\
+ITEMS,Items.csv
+TABLES,Tables.csv
+PEOPLE,Persons.csv

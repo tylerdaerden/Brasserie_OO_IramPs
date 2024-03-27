@@ -73,6 +73,9 @@
 
 	<ItemGroup>
 	  <Folder Include="Model\Restaurant\Planning\" />
+	  <Folder Include="Utilities\DataAccess\Files\" />
+	  <Folder Include="Utilities\EntriesValidations\" />
+	  <Folder Include="Utilities\Services\" />
 	  <Folder Include="ViewModel\" />
 	  <Folder Include="ViewModel\" />
 	</ItemGroup>
