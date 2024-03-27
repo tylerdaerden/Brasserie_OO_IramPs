@@ -27,7 +27,7 @@ namespace Brasse.Model.Restaurant.Design
 
         #region Constructeurs 
 
-        public Table(int seatsNumber, int idNumber, bool isNowBusy)
+        public Table(int seatsNumber, int idNumber, bool isNowBusy = false)
         {
             SeatsNumber = seatsNumber;
             IdNumber = idNumber;
@@ -102,5 +102,5 @@ namespace Brasse.Model.Restaurant.Design
         } 
         #endregion
 
-    }
+    }//end TableClass
 }

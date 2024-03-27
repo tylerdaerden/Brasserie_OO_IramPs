@@ -2,6 +2,9 @@
 using Brasserie.Model.Restaurant.Activity;
 using Brasserie.Model.Restaurant.Catering;
 using Brasserie.Model.Restaurant.People;
+using Brasserie.Utilities.DataAccess;
+using Brasserie.Utilities.DataAccess.Files;
+
 
 //using Phase;
 using System.Collections.ObjectModel;
@@ -335,11 +338,18 @@ namespace Brasserie.View
 
         }
 
+        private void ButtonTestInterfaceAndDataAccess_Clicked(object sender, EventArgs e)
+        {
 
+            string CONFIG_FILE = @"D:\Code et Dev\Code & Développement\001 Bac Informatique\2023-2024\0 POO\MAUI Projects\Brasserie\Configuration\Datas\Config.txt";
+            DataFilesManager dataFilesManager = new DataFilesManager(CONFIG_FILE);
+            DataAccessCsvFile daCsv = new DataAccessCsvFile(dataFilesManager);
+            ItemsCollection items = daCsv.GetAllItems();
+            items.ToList().ForEach(it => lblDebug.Text += $"\n Item: {it.Name} - prix {it.UnitPrice.ToString()}€ - {it.AutoDescription()}");
+            CustomersCollection customers = daCsv.GetAllCustomers();
+            customers.ToList().ForEach(c => lblDebug.Text += $"\n Client:{c.Id} {c.FirstName} {c.LastName}");
 
-
-
-
+        }
     }
 
 

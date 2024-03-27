@@ -1,4 +1,4 @@
-FOLDER,D:\Code et Dev\Code & Développement\001 Bac Informatique\2023-2024\0 POO\MAUI Projects\Brasserie\Configuration\Datas\Csv
+FOLDER,D:\Code et Dev\Code & Développement\001 Bac Informatique\2023-2024\0 POO\MAUI Projects\Brasserie\Configuration\Datas\Csv\
 ITEMS,Items.csv
 TABLES,Tables.csv
 PEOPLE,Persons.csv
