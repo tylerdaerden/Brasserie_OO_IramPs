@@ -363,7 +363,7 @@ namespace Brasserie.View
             DataFilesManager dataFilesManager = new DataFilesManager(CONFIG_FILE);
             DataAccessCsvFile daCsv = new DataAccessCsvFile(dataFilesManager);
             StaffMembersCollection staffmembers = daCsv.GetAllStaffMembers();
-            //Ci dessous penser à trouver sur le GetTyope comment n'afficher que manager ou staffmember ↓↓↓
+            //Ci dessous penser à trouver sur le GetType comment n'afficher que manager ou staffmember ↓↓↓
             staffmembers.ToList().ForEach(sm => lblDebug.Text += $"\n {sm.GetType()} firstname : {sm.FirstName} , lastname : {sm.LastName} ");
 
         }
