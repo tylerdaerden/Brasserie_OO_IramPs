@@ -1,12 +1,11 @@
 Class;Id;LastName;FirstName;Gender;Email;MobilePhoneNumber;Type;BankAccount;Address;Salary;Password
-Customer;1;Beumier;Damien;true;beumierdamien@gmail.com;485678234;New;;;;
-Customer;2;Deroisin ;Sophie;false;deroisinsophie@gmail.com;456789034;New;;;;
-Customer;3;Darmani;Izaak;true;darmani2345@gmail.com;479345090;New;;;;
-StaffMember;4;Fritz;Hector;true;fritzhector@gmail.com;495446922;;BE84 5679 9034 2356;4, rue du marais 7030 Ghlin;3250;
-StaffMember;5;Swift;Taylor;false;taylor999@gmail.com;485789033;;BE84 7090 3456 2390;5, rue grande 7000 LosAngeles;32500;
-StaffMember;6;Renard;Fred;true;fredrenard01@gmail.com;496789034;;BE90 3456 7892 2345;203, rue des pres 7100 Soignies;2900;
-Manager;7;Tarne;Isabelle;false;isablletarne@gmail.com;487569901;;BE84 5454 6780 1243;89, chemin vert 7030 Baudour;5234;Password01
-Customer;10;Maggi;Toni;true;maggiton@gmail.com;0491609830;Occasional
-Customer;11;Fernez;Jean;true;jeanfernez@gmail.com;0480458801;Regular
+CUSTOMER;1;Beumier;Damien;true;beumierdamien@gmail.com;485678234;New;;;;
+CUSTOMER;2;Deroisin ;Sophie;false;deroisinsophie@gmail.com;456789034;New;;;;
+CUSTOMER;3;Darmani;Izaak;true;darmani2345@gmail.com;479345090;New;;;;
+STAFFMEMBER;4;Fritz;Hector;true;fritzhector@gmail.com;495446922;;BE84 5679 9034 2356;4, rue du marais 7030 Ghlin;3250;
+STAFFMEMBER;5;Swift;Taylor;false;taylor999@gmail.com;485789033;;BE84 7090 3456 2390;5, rue grande 7000 LosAngeles;32500;
+STAFFMEMBER;6;Renard;Fred;true;fredrenard01@gmail.com;496789034;;BE90 3456 7892 2345;203, rue des pres 7100 Soignies;2900;
+MANAGER;7;Tarne;Isabelle;false;isablletarne@gmail.com;487569901;;BE84 5454 6780 1243;89, chemin vert 7030 Baudour;5234;Password01
+;;;a;;;;;;;;
 Customer;10;Maggi;Toni;true;maggiton@gmail.com;0491609830;Occasional
 Customer;11;Fernez;Jean;true;jeanfernez@gmail.com;0480458801;Regular

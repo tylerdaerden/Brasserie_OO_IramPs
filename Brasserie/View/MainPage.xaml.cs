@@ -282,7 +282,7 @@ namespace Brasserie.View
         private void ButtonTestReadWriteTextFileWithList_Clicked(object sender, EventArgs e)
         {
             //chemin pour tour ↓↓
-            string csvFilePath = @"D:\Code et Dev\Code & Développement\001 Bac Informatique\2023-2024\0 POO\MAUI Projects\Brasserie\Configuration\Datas\Csv\Persons.csv";
+            string csvFilePath = @"D:\IRAM\2023_2024\0_POO\MAUI_Projects\Brasserie\Configuration\Datas\Csv\Persons.csv";
             //chemin pour portable ↓↓
             //string csvFilePath = "C:\\Users\\denys\\Desktop\\POO\\MAUI Projects\\Brasserie\\Brasserie\\Configuration\\Datas\\Csv\\Persons.csv";
             List<string> personsList = new List<string>();//create empty collection of string
@@ -298,7 +298,7 @@ namespace Brasserie.View
             personsList.Add("Customer;11;Fernez;Jean;true;jeanfernez@gmail.com;0480458801;Regular");
             //write all lines in a new csv file.
             //chemin pour tour ↓↓
-            File.WriteAllLines(@"D:\Code et Dev\Code & Développement\001 Bac Informatique\2023-2024\0 POO\MAUI Projects\Brasserie\Configuration\Datas\Csv\PersonsRewrite.csv", personsList);
+            File.WriteAllLines(@"D:\IRAM\2023_2024\0_POO\MAUI_Projects\Brasserie\Configuration\Datas\Csv\PersonsRewrite.csv", personsList);
             //chemin pour portable ↓↓
             //File.WriteAllLines(@"C:\\Users\\denys\\Desktop\\POO\\MAUI Projects\\Brasserie\\Brasserie\\Configuration\\Datas\\Csv\\PersonsRewrite.csv", personsList);
 
