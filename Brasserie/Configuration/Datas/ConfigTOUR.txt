@@ -1,0 +1,4 @@
+FOLDER,D:\IRAM\2023_2024\0_POO\MAUI_Projects\Brasserie\Configuration\Datas\Csv\
+ITEMS,Items.csv
+TABLES,Tables.csv
+PEOPLE,Persons.csv

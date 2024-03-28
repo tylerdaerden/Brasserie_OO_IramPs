@@ -340,8 +340,10 @@ namespace Brasserie.View
 
         private void ButtonTestInterfaceAndDataAccess_Clicked(object sender, EventArgs e)
         {
-
-            string CONFIG_FILE = @"D:\IRAM\2023_2024\0_POO\MAUI_Projects\Brasserie\Configuration\Datas\Config.txt";
+            // CONFIG_FILE POUR TOUR ↓↓↓
+            //string CONFIG_FILE = @"D:\IRAM\2023_2024\0_POO\MAUI_Projects\Brasserie\Configuration\Datas\Config.txt";
+            // CONFIG_FILE POUR PORTABLE ↓↓↓
+            string CONFIG_FILE = @"C:\Users\denys\Desktop\POO\MAUI Projects\Brasserie\Brasserie\Configuration\Datas\Config.txt";
             DataFilesManager dataFilesManager = new DataFilesManager(CONFIG_FILE);
             DataAccessCsvFile daCsv = new DataAccessCsvFile(dataFilesManager);
             ItemsCollection items = daCsv.GetAllItems();
