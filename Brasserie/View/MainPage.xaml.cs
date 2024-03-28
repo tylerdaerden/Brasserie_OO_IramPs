@@ -341,7 +341,7 @@ namespace Brasserie.View
         private void ButtonTestInterfaceAndDataAccess_Clicked(object sender, EventArgs e)
         {
 
-            string CONFIG_FILE = @"D:\Code et Dev\Code & Développement\001 Bac Informatique\2023-2024\0 POO\MAUI Projects\Brasserie\Configuration\Datas\Config.txt";
+            string CONFIG_FILE = @"D:\IRAM\2023_2024\0_POO\MAUI_Projects\Brasserie\Configuration\Datas\Config.txt";
             DataFilesManager dataFilesManager = new DataFilesManager(CONFIG_FILE);
             DataAccessCsvFile daCsv = new DataAccessCsvFile(dataFilesManager);
             ItemsCollection items = daCsv.GetAllItems();

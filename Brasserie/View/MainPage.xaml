@@ -132,7 +132,7 @@
 
             <Button
                 x:Name="ButtonTestInterfaceAndDataAccess"
-                Text="Test Accès aux Données en Csv"
+                Text="TestAccèsauxDonnéesenCsv"
                 Clicked="ButtonTestInterfaceAndDataAccess_Clicked"
                 Style="{StaticResource TestButton}"
                             />
