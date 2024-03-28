@@ -137,6 +137,13 @@
                 Style="{StaticResource TestButton}"
                             />
 
+            <Button
+                x:Name="ButtonTestExerciceGetAllStaffMembers"
+                Text="TestGetAllStaffMembers"
+                Clicked="ButtonTestExerciceGetAllStaffMembers_Clicked"
+                Style="{StaticResource TestButton}"
+                            />
+
 
             <Image
                 Source="brewery.png"

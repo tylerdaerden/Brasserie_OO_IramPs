@@ -104,6 +104,7 @@ namespace Brasserie.Utilities.DataAccess
                 return null;
             }
         }//end GetAllItems
+
         /// <summary>
         /// Split a line like : Customer;1;Beumier;Damien;true;beumierdamien@gmail.com;485678234;New;;;;
         /// and create instance with each fields.
@@ -173,10 +174,62 @@ namespace Brasserie.Utilities.DataAccess
                 return null;
             }
         }
+
+
+        private static StaffMember GetStaffMember(string csvline)
+        {
+            string[] fields = csvline.Split(';');
+            switch (fields[0])
+            {
+                case "STAFFMEMBER":
+                    return new StaffMember(id : int.Parse(fields[1]), lastName:  fields[2] , firstName:  fields[3] , gender:  bool.Parse(fields[4]) ,email: fields[5] , phone: fields[6] , bankAccount: fields[7] , address: fields[9] , salary: double.Parse(fields[10]));
+
+                case "MANAGER":
+                    return new Manager(id: int.Parse(fields[1]), lastName: fields[2], firstName: fields[3], gender: bool.Parse(fields[4]), email: fields[5], phone: fields[6], bankAccount: fields[7], address: fields[9], salary: double.Parse(fields[10]) , password: fields[11]);
+
+                default:
+                    return null;
+            }
+
+        }
+
+
+
+
+        /// <summary>
+        /// Get All StaffMembers in a CSV File
+        /// </summary>
+        /// <returns></returns>
+        /// <exception cref="NotImplementedException"></exception>
         public override StaffMembersCollection GetAllStaffMembers()
         {
-            throw new NotImplementedException();
-        }
+            List<string> listToRead = new List<string>();
+            StaffMembersCollection staffmembers = new StaffMembersCollection();
+            AccessPath = DataFilesManager.DataFiles.GetFilePathByCodeFunction("PEOPLE");
+            if (IsValidAccessPath)
+            {
+                listToRead = System.IO.File.ReadAllLines(AccessPath).ToList();
+                //remove first title line
+                listToRead.RemoveAt(0);
+                foreach (string s in listToRead)
+                {
+                    StaffMember sm = GetStaffMember(s);
+                    if (sm != null)
+                    {
+                        staffmembers.AddStaffmember(sm);
+                    }
+                }
+                return staffmembers;
+            }
+            else
+            {
+                //Console.WriteLine("GetAllStaffMembers Failes -> File doesnt exist");
+                return null;
+            }
+        }//end GetAllStaffMembers
+
+
+
         /// <summary>
         ///Convert "0" or "1" from csv File to bool type false or true
         ////// </summary>
