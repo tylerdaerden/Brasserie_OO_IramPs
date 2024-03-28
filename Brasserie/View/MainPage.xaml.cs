@@ -21,18 +21,18 @@ namespace Brasserie.View
             myCounter = new Counter();
         }
 
-        private void OnCounterClicked(object sender, EventArgs e)
-        {
+        //private void OnCounterClicked(object sender, EventArgs e)
+        //{
 
-            myCounter.IncrementCounter();
+        //    myCounter.IncrementCounter();
 
 
-            EntryCount.Text = myCounter.CounterValue.ToString();
-            //texte de la case de clics ↓↓↓
-            CounterBtn.Text = "Nombre de Clics :" + myCounter.CounterValue.ToString();
+        //    EntryCount.Text = myCounter.CounterValue.ToString();
+        //    //texte de la case de clics ↓↓↓
+        //    CounterBtn.Text = "Nombre de Clics :" + myCounter.CounterValue.ToString();
 
-            //SemanticScreenReader.Announce(CounterBtn.Text);
-        }
+        //    //SemanticScreenReader.Announce(CounterBtn.Text);
+        //}
 
         private void buttonTestCreateFirstPersons_Clicked(object sender, EventArgs e)
         {
