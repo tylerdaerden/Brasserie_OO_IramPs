@@ -355,7 +355,6 @@ namespace Brasserie.View
 
         private void ButtonTestExerciceGetAllStaffMembers_Clicked(object sender, EventArgs e)
         {
-
             // CONFIG_FILE POUR TOUR ↓↓↓
             //string CONFIG_FILE = @"D:\IRAM\2023_2024\0_POO\MAUI_Projects\Brasserie\Configuration\Datas\Config.txt";
             // CONFIG_FILE POUR PORTABLE ↓↓↓
@@ -365,7 +364,6 @@ namespace Brasserie.View
             StaffMembersCollection staffmembers = daCsv.GetAllStaffMembers();
             //Ci dessous penser à trouver sur le GetType comment n'afficher que manager ou staffmember ↓↓↓
             staffmembers.ToList().ForEach(sm => lblDebug.Text += $"\n {sm.GetType()} firstname : {sm.FirstName} , lastname : {sm.LastName} ");
-
         }
     }
 
