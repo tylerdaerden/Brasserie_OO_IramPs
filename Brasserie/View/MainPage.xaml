@@ -144,6 +144,13 @@
                 Style="{StaticResource TestButton}"
                             />
 
+            <Button
+                x:Name="buttonTestDataAccessJsonFile"
+                Text="TestLectureSauvegardeDepuisJSON"
+                Clicked="buttonTestDataAccessJsonFile_Clicked"
+                Style="{StaticResource TestButton}"
+                            />
+
 
             <Image
                 Source="brewery.png"

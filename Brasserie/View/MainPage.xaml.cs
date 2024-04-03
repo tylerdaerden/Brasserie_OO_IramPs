@@ -356,14 +356,34 @@ namespace Brasserie.View
         private void ButtonTestExerciceGetAllStaffMembers_Clicked(object sender, EventArgs e)
         {
             // CONFIG_FILE POUR TOUR ↓↓↓
-            //string CONFIG_FILE = @"D:\IRAM\2023_2024\0_POO\MAUI_Projects\Brasserie\Configuration\Datas\Config.txt";
+            string CONFIG_FILE = @"D:\IRAM\2023_2024\0_POO\MAUI_Projects\Brasserie\Configuration\Datas\Config.txt";
             // CONFIG_FILE POUR PORTABLE ↓↓↓
-            string CONFIG_FILE = @"C:\Users\denys\Desktop\POO\MAUI Projects\Brasserie\Brasserie\Configuration\Datas\Config.txt";
+            //string CONFIG_FILE = @"C:\Users\denys\Desktop\POO\MAUI Projects\Brasserie\Brasserie\Configuration\Datas\Config.txt";
             DataFilesManager dataFilesManager = new DataFilesManager(CONFIG_FILE);
             DataAccessCsvFile daCsv = new DataAccessCsvFile(dataFilesManager);
             StaffMembersCollection staffmembers = daCsv.GetAllStaffMembers();
             //Ci dessous penser à trouver sur le GetType comment n'afficher que manager ou staffmember ↓↓↓
             staffmembers.ToList().ForEach(sm => lblDebug.Text += $"\n {sm.GetType()} firstname : {sm.FirstName} , lastname : {sm.LastName} ");
+        }
+
+        private void buttonTestDataAccessJsonFile_Clicked(object sender, EventArgs e)
+        {
+            // CONFIG_FILE POUR TOUR ↓↓↓
+            string CONFIG_FILE = @"D:\IRAM\2023_2024\0_POO\MAUI_Projects\Brasserie\Configuration\Datas\Config.txt";
+            // CONFIG_FILE POUR PORTABLE ↓↓↓
+            //string CONFIG_FILE = @"C:\Users\denys\Desktop\POO\MAUI Projects\Brasserie\Brasserie\Configuration\Datas\Config.txt";
+            DataFilesManager dataFilesManager = new DataFilesManager(CONFIG_FILE);
+            DataAccessJsonFile da = new DataAccessJsonFile(dataFilesManager);
+            ItemsCollection items = da.GetAllItems();
+            items.ToList().ForEach(it => lblDebug.Text += $"\n Item: {it.Name} - prix {it.UnitPrice.ToString()}€ - {it.AutoDescription()}");
+            items[0].Description = "on a change la description du 1er item";
+            items[5].UnitPrice = 99.9; //changement du prix du 6ème item
+            //test de Add Item
+            //items.AddItem(new Soft(24, "Roman Cola", "Cola Made in Belgium", 2.14, "UnbonverredeRomanColaGlacé.png", 6.12, 33.45));
+            //test de Delete Item
+            //items.DeleteItem(items[0]);
+            da.UpdateAllItemsDatas(items);//sauvegarde des données
+
         }
     }
 

@@ -1,0 +1,35 @@
+{
+  "$type": "Brasserie.Model.Restaurant.People.CustomersCollection, Brasserie",
+  "$values": [
+    {
+      "$type": "Brasserie.Model.Restaurant.People.Customer, Brasserie",
+      "Type": 0,
+      "Id": 1,
+      "LastName": "Beumier",
+      "FirstName": "Damien",
+      "Gender": true,
+      "Email": "beumierdamien@gmail.com",
+      "MobilePhoneNumber": null
+    },
+    {
+      "$type": "Brasserie.Model.Restaurant.People.Customer, Brasserie",
+      "Type": 0,
+      "Id": 2,
+      "LastName": null,
+      "FirstName": "Sophie",
+      "Gender": false,
+      "Email": "deroisinsophie@gmail.com",
+      "MobilePhoneNumber": null
+    },
+    {
+      "$type": "Brasserie.Model.Restaurant.People.Customer, Brasserie",
+      "Type": 0,
+      "Id": 3,
+      "LastName": "Darmani",
+      "FirstName": "Izaak",
+      "Gender": true,
+      "Email": "darmani2345@gmail.com",
+      "MobilePhoneNumber": null
+    }
+  ]
+}
