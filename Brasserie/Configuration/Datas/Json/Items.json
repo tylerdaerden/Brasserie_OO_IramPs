@@ -3,277 +3,254 @@
   "$values": [
     {
       "$type": "Brasserie.Model.Restaurant.Catering.Dish, Brasserie",
-      "Id": 1,
       "Name": "Spaghettis bolognaise",
-      "Description": "Pâtes à la Sauce Bolognaise",
+      "Description": "on a change la description du 1er item",
+      "Id": 1,
       "UnitPrice": 17.5,
-      "PictureName": "spaghbolo.jpg",
       "VatRate": 21.0,
-      "Allergens": null
+      "PictureName": "spaghbolo.jpg"
     },
     {
       "$type": "Brasserie.Model.Restaurant.Catering.Dish, Brasserie",
-      "Id": 2,
       "Name": "Penne arrabiata",
       "Description": "pâtes sauce tomate pimentée",
+      "Id": 2,
       "UnitPrice": 18.0,
-      "PictureName": "pennes_arrabiata.jpg",
       "VatRate": 21.0,
-      "Allergens": null
+      "PictureName": "pennes_arrabiata.jpg"
     },
     {
       "$type": "Brasserie.Model.Restaurant.Catering.Dish, Brasserie",
-      "Id": 3,
       "Name": "Spahhettis carbonara",
       "Description": "pâtes sauce crème lardons et oeuf",
+      "Id": 3,
       "UnitPrice": 18.5,
-      "PictureName": "spaghetti_carbonara.jpg",
       "VatRate": 21.0,
-      "Allergens": null
+      "PictureName": "spaghetti_carbonara.jpg"
     },
     {
       "$type": "Brasserie.Model.Restaurant.Catering.Dish, Brasserie",
-      "Id": 4,
       "Name": "Penne quatre fromages",
       "Description": "pâtes sauce et fromages",
+      "Id": 4,
       "UnitPrice": 18.5,
-      "PictureName": "pennes_4fromages.jpg",
       "VatRate": 21.0,
-      "Allergens": null
+      "PictureName": "pennes_4fromages.jpg"
     },
     {
       "$type": "Brasserie.Model.Restaurant.Catering.Dish, Brasserie",
-      "Id": 5,
       "Name": "Steak frites",
       "Description": "Steak de boeuf (300gr) frites salades et béarnaise",
+      "Id": 5,
       "UnitPrice": 23.5,
-      "PictureName": "steak_frites_salade.jpg",
       "VatRate": 21.0,
-      "Allergens": null
+      "PictureName": "steak_frites_salade.jpg"
     },
     {
       "$type": "Brasserie.Model.Restaurant.Catering.Dish, Brasserie",
-      "Id": 6,
       "Name": "Brochettes du chef",
       "Description": "Brochette de boeuf, frite et salade",
+      "Id": 6,
       "UnitPrice": 99.9,
-      "PictureName": "brochette_boeuf.jpg",
       "VatRate": 21.0,
-      "Allergens": null
+      "PictureName": "brochette_boeuf.jpg"
     },
     {
       "$type": "Brasserie.Model.Restaurant.Catering.Dish, Brasserie",
-      "Id": 7,
       "Name": "Filet américain",
       "Description": "Filet américain préparé servi sur planche",
+      "Id": 7,
       "UnitPrice": 20.8,
-      "PictureName": "filet_americain.jpg",
       "VatRate": 21.0,
-      "Allergens": null
+      "PictureName": "filet_americain.jpg"
     },
     {
       "$type": "Brasserie.Model.Restaurant.Catering.Soft, Brasserie",
       "Volume": 25.0,
-      "Id": 8,
       "Name": "Coca Cola",
       "Description": "Boisson rafraichissante aux extraits de vegetaux",
+      "Id": 8,
       "UnitPrice": 3.4,
-      "PictureName": "cocacola25.jpg",
       "VatRate": 21.0,
-      "Allergens": null
+      "PictureName": "cocacola25.jpg"
     },
     {
       "$type": "Brasserie.Model.Restaurant.Catering.Soft, Brasserie",
       "Volume": 25.0,
-      "Id": 9,
       "Name": "Schwepps Tonic",
       "Description": "Boisson pétillante",
+      "Id": 9,
       "UnitPrice": 3.6,
-      "PictureName": "schwepps_tonic25.jpg",
       "VatRate": 21.0,
-      "Allergens": null
+      "PictureName": "schwepps_tonic25.jpg"
     },
     {
       "$type": "Brasserie.Model.Restaurant.Catering.Soft, Brasserie",
       "Volume": 25.0,
-      "Id": 10,
       "Name": "Sprite",
       "Description": "Boisson pétillante aux extraits de citron",
+      "Id": 10,
       "UnitPrice": 3.6,
-      "PictureName": "sprite25.jpg",
       "VatRate": 21.0,
-      "Allergens": null
+      "PictureName": "sprite25.jpg"
     },
     {
       "$type": "Brasserie.Model.Restaurant.Catering.Soft, Brasserie",
       "Volume": 25.0,
-      "Id": 11,
       "Name": "Fanta",
       "Description": "Boisson pétillante aux extraits d'orange",
+      "Id": 11,
       "UnitPrice": 3.6,
-      "PictureName": "fanta25.jpg",
       "VatRate": 21.0,
-      "Allergens": null
+      "PictureName": "fanta25.jpg"
     },
     {
       "$type": "Brasserie.Model.Restaurant.Catering.Soft, Brasserie",
       "Volume": 25.0,
-      "Id": 12,
       "Name": "Ice Tea",
       "Description": null,
+      "Id": 12,
       "UnitPrice": 3.4,
-      "PictureName": "ice_tea25.jpg",
       "VatRate": 21.0,
-      "Allergens": null
+      "PictureName": "ice_tea25.jpg"
     },
     {
       "$type": "Brasserie.Model.Restaurant.Catering.Soft, Brasserie",
       "Volume": 25.0,
-      "Id": 13,
       "Name": "Ice Tea pêche",
       "Description": "Thé glacé aromaisé à la pêche",
+      "Id": 13,
       "UnitPrice": 3.6,
-      "PictureName": "ice_tea_peche25.jpg",
       "VatRate": 21.0,
-      "Allergens": null
+      "PictureName": "ice_tea_peche25.jpg"
     },
     {
       "$type": "Brasserie.Model.Restaurant.Catering.Soft, Brasserie",
       "Volume": 25.0,
-      "Id": 14,
       "Name": "Ice Tea lemon",
       "Description": "Thé glacé aromaisé au citron",
+      "Id": 14,
       "UnitPrice": 3.6,
-      "PictureName": "ice_tea_lemon25.jpg",
       "VatRate": 21.0,
-      "Allergens": null
+      "PictureName": "ice_tea_lemon25.jpg"
     },
     {
       "$type": "Brasserie.Model.Restaurant.Catering.Soft, Brasserie",
       "Volume": 25.0,
-      "Id": 15,
       "Name": "Ice Tea zero",
       "Description": "Thé glacé sans calories",
+      "Id": 15,
       "UnitPrice": 3.6,
-      "PictureName": "ice_tea_zero25.jpg",
       "VatRate": 21.0,
-      "Allergens": null
+      "PictureName": "ice_tea_zero25.jpg"
     },
     {
       "$type": "Brasserie.Model.Restaurant.Catering.Aperitif, Brasserie",
       "Percentage": 14.0,
-      "IsNA": false,
+      "IsNa": false,
       "Volume": 12.0,
-      "Id": 16,
       "Name": "Porto Rouge",
       "Description": "Apéritif sucré",
+      "Id": 16,
       "UnitPrice": 5.8,
-      "PictureName": "porto.jpg",
       "VatRate": 21.0,
-      "Allergens": null
+      "PictureName": "porto.jpg"
     },
     {
       "$type": "Brasserie.Model.Restaurant.Catering.Aperitif, Brasserie",
       "Percentage": 14.0,
-      "IsNA": false,
+      "IsNa": false,
       "Volume": 12.0,
-      "Id": 17,
       "Name": "Kirr",
       "Description": "Apéritif fruité",
+      "Id": 17,
       "UnitPrice": 6.1,
-      "PictureName": "Kirr.jpg",
       "VatRate": 21.0,
-      "Allergens": null
+      "PictureName": "Kirr.jpg"
     },
     {
       "$type": "Brasserie.Model.Restaurant.Catering.Beer, Brasserie",
-      "IsTrappistBeer": true,
       "IsAbbeyBeer": true,
+      "IsTrappistBeer": true,
       "Percentage": 12.0,
-      "IsNA": false,
+      "IsNa": false,
       "Volume": 12.5,
-      "Id": 18,
       "Name": "Bush Caractere 12,5",
       "Description": "bière brassée sur place",
+      "Id": 18,
       "UnitPrice": 2.7,
-      "PictureName": "buschcaractere125.jpg",
       "VatRate": 21.0,
-      "Allergens": null
+      "PictureName": "buschcaractere125.jpg"
     },
     {
       "$type": "Brasserie.Model.Restaurant.Catering.Beer, Brasserie",
-      "IsTrappistBeer": true,
       "IsAbbeyBeer": true,
+      "IsTrappistBeer": true,
       "Percentage": 10.5,
-      "IsNA": false,
+      "IsNa": false,
       "Volume": 12.5,
-      "Id": 19,
       "Name": "Bush Triple 12,5",
       "Description": "bière brassée sur place",
+      "Id": 19,
       "UnitPrice": 2.7,
-      "PictureName": "BuschTriple125.jpg",
       "VatRate": 21.0,
-      "Allergens": null
+      "PictureName": "BuschTriple125.jpg"
     },
     {
       "$type": "Brasserie.Model.Restaurant.Catering.Beer, Brasserie",
-      "IsTrappistBeer": true,
       "IsAbbeyBeer": true,
+      "IsTrappistBeer": true,
       "Percentage": 10.5,
-      "IsNA": false,
+      "IsNa": false,
       "Volume": 25.0,
-      "Id": 20,
       "Name": "Bush Triple 25",
       "Description": "bière brassée sur place",
+      "Id": 20,
       "UnitPrice": 5.2,
-      "PictureName": "BuschTriple125.jpg",
       "VatRate": 21.0,
-      "Allergens": null
+      "PictureName": "BuschTriple125.jpg"
     },
     {
       "$type": "Brasserie.Model.Restaurant.Catering.Beer, Brasserie",
-      "IsTrappistBeer": true,
       "IsAbbeyBeer": true,
+      "IsTrappistBeer": true,
       "Percentage": 10.5,
-      "IsNA": false,
+      "IsNa": false,
       "Volume": 25.0,
-      "Id": 21,
       "Name": "Bush Ambrée 25",
       "Description": "bière houblonée brassée sur place",
+      "Id": 21,
       "UnitPrice": 4.5,
-      "PictureName": "bush_ambree25.jpg",
       "VatRate": 21.0,
-      "Allergens": null
+      "PictureName": "bush_ambree25.jpg"
     },
     {
       "$type": "Brasserie.Model.Restaurant.Catering.Beer, Brasserie",
-      "IsTrappistBeer": true,
       "IsAbbeyBeer": true,
+      "IsTrappistBeer": true,
       "Percentage": 10.5,
-      "IsNA": false,
+      "IsNa": false,
       "Volume": 25.0,
-      "Id": 22,
       "Name": "Cuvée des Trolls 25",
       "Description": "bière blonde plein d'arômes et au pouvoir magique'",
+      "Id": 22,
       "UnitPrice": 4.8,
-      "PictureName": "cuvee_des_trolls25.jpg",
       "VatRate": 21.0,
-      "Allergens": null
+      "PictureName": "cuvee_des_trolls25.jpg"
     },
     {
       "$type": "Brasserie.Model.Restaurant.Catering.Beer, Brasserie",
-      "IsTrappistBeer": false,
       "IsAbbeyBeer": false,
+      "IsTrappistBeer": false,
       "Percentage": 10.5,
-      "IsNA": false,
+      "IsNa": false,
       "Volume": 75.0,
-      "Id": 23,
       "Name": "Cuvée des Trolls 75",
       "Description": "bière blonde plein d'arômes et au pouvoir magique'",
+      "Id": 23,
       "UnitPrice": 4.8,
-      "PictureName": "cuvee_des_trolls_triple_75.jpg",
       "VatRate": 21.0,
-      "Allergens": null
+      "PictureName": "cuvee_des_trolls_triple_75.jpg"
     }
   ]
 }
