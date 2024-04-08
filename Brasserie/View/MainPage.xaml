@@ -7,28 +7,25 @@
         <ResourceDictionary>
             <Style x:Key= "TestButton" TargetType ="Button">
                 <Setter Property="HorizontalOptions" Value="Start" />
-                <Setter Property="FontSize" Value="12"  />
+                <Setter Property="FontSize" Value="12" />
+                <Setter Property="WidthRequest" Value="250"/>
                 <Setter Property="BackgroundColor" Value="MediumPurple"/>
-                <Setter Property="TextColor" Value="WhiteSmoke"/>
             </Style>
-
             <Style x:Key="LabelDebug" TargetType="Label">
                 <Setter Property="HorizontalOptions" Value="Start" />
                 <Setter Property="Padding" Value="10" />
                 <Setter Property="BackgroundColor" Value="Grey" />
                 <Setter Property="VerticalTextAlignment"  Value="Center"/>
             </Style>
-
             <Style x:Key="ListViewStyle" TargetType="ListView">
                 <Setter Property="VerticalScrollBarVisibility" Value="Always" />
                 <!-- Autres setters pour le style si nécessaire -->
             </Style>
-
         </ResourceDictionary>
+
 
         <DataTemplate x:Key="ListViewItemTemplate">
             <ViewCell>
-
                 <Grid Padding="5">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="Auto" />
@@ -39,50 +36,34 @@
                         <ColumnDefinition Width="Auto" />
                     </Grid.ColumnDefinitions>
                     <Image Grid.RowSpan="2"
-                Source="{Binding PictureName}"
-                Aspect="AspectFill"
-                HeightRequest="80"
-                WidthRequest="80" />
+                        Source="{Binding PictureName}"
+                        Aspect="AspectFill"
+                        HeightRequest="80"
+                        WidthRequest="80" />
                     <Label Grid.Column="1"
-                Margin="10,0,0,0"            
-                Text="{Binding Name}"
-                FontAttributes="Bold" />
+                        Margin="10,0,0,0"
+                        Text="{Binding Name}"
+                        FontAttributes="Bold" />
                     <Label Grid.Row="1"
-                Grid.Column="1"
-                Text="{Binding UnitPrice, StringFormat='{}{0:F2} €'}"
-                Margin="10,0,0,0"  
-                FontAttributes="Italic"
-                VerticalOptions="End" />
+                        Grid.Column="1"
+                        Text="{Binding UnitPrice, StringFormat='{}{0:F2} €'}"
+                        Margin="10,0,0,0"
+                        FontAttributes="Italic"
+                        VerticalOptions="End" />
                 </Grid>
-
             </ViewCell>
-
         </DataTemplate>
-
     </ContentPage.Resources>
 
     <ScrollView>
 
         <Grid Margin="0,20,0,20">
-
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"/>
-                <ColumnDefinition Width="2*"/>
-                <ColumnDefinition Width="3*"/>
-
-
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
-
-
-
-
-
-
-
-            <VerticalStackLayout
-            Grid.Column="0"
-            Padding="30,0"
-            Spacing="10">
+            <VerticalStackLayout Grid.Column="0" Padding="5,0" Spacing="5">
 
                 <Label
                 x:Name="lblDebug"
@@ -209,11 +190,20 @@
                 Style="{StaticResource TestButton}"
                             />
 
+                <!--
                 <Button
                 x:Name="buttonTestViewModel"
                 Text="TestViewModel"
                 Clicked="buttonTestViewModel_Clicked"
                 Style="{StaticResource TestButton}"
+                            /> -->
+                
+
+                <Button
+                    x:Name="buttonTestDisplayAlert"
+                    Text="TestDisplayAlert"
+                    Clicked="buttonTestDisplayAlert_Clicked"
+                    Style="{StaticResource TestButton}"
                             />
 
 
@@ -245,40 +235,40 @@
 
             </VerticalStackLayout>
             <VerticalStackLayout Grid.Column="1">
-                <CollectionView   ItemsSource="{Binding Items, Mode=TwoWay}" SelectionMode="Single" SelectedItem="{Binding ItemSelected}" >
-
-                    <CollectionView.ItemTemplate>
-                        <DataTemplate>
-                            <Grid >
-                                <ContentView >
-                                    <Label             
-                        Text="{Binding Name}"                        
-                        VerticalOptions="Center"
-                        HorizontalTextAlignment="Center"
-
-                       />
-
-
-
-
-
-
-                                </ContentView>
-                                
-                                
-                                
-                            </Grid>
-                        </DataTemplate>
-                    </CollectionView.ItemTemplate>
-
-                </CollectionView>
-                </VerticalStackLayout>
-                <VerticalStackLayout Grid.Column="3">
-                <ListView Grid.Column="2"   ItemsSource="{Binding Items}" SelectedItem="{Binding ItemSelected} " ItemTemplate="{StaticResource ListViewItemTemplate}" Style="{StaticResource ListViewStyle}" />
-
+                <Label Margin="0, 20, 0, 0"
+                    Text="{Binding RestaurantName}"
+                    FontAttributes ="Bold"
+                    HorizontalOptions="Center"
+                    />
+                <ListView ItemsSource="{Binding Items}" SelectedItem="{Binding ItemUserSelection} " ItemTemplate="{StaticResource ListViewItemTemplate}" Style="{StaticResource ListViewStyle}" />
             </VerticalStackLayout>
+            <VerticalStackLayout Grid.Column="2">
+                <Label
+                    Text="Votre sélection :"
+                    HorizontalOptions="Center"
+                    />
+                <Label Margin="0, 20, 0, 0"
+                    Text="{Binding ItemUserSelection.Name}"
+                    FontAttributes ="Bold"
+                    HorizontalOptions="Center"
+                    />
+                <Button
+                    Margin="50"
+                    Text="Open item details"
+                    Command="{Binding ShowItemDetailsCommand}"
+                    HorizontalOptions="Center"
+                    />
 
+                <Button
+                    Margin="50"
+                    Text="Index Prices by 5%"
+                    Command="{Binding IndexPricesCommand}"
+                    HorizontalOptions="Center"
+                    />
+            </VerticalStackLayout>
         </Grid>
+
+        
     </ScrollView>
 
 </ContentPage>

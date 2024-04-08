@@ -21,7 +21,7 @@
     },
     {
       "$type": "Brasserie.Model.Restaurant.Catering.Dish, Brasserie",
-      "Name": "Spahhettis carbonara",
+      "Name": "Spaghettis carbonara",
       "Description": "pâtes sauce crème lardons et oeuf",
       "Id": 3,
       "UnitPrice": 18.5,

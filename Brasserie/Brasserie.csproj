@@ -78,7 +78,6 @@
 	  <Folder Include="Model\Restaurant\Planning\" />
 	  <Folder Include="Utilities\DataAccess\Files\" />
 	  <Folder Include="Utilities\EntriesValidations\" />
-	  <Folder Include="Utilities\Services\" />
 	</ItemGroup>
 
 </Project>

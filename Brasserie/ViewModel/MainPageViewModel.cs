@@ -1,5 +1,7 @@
 ﻿using Brasserie.Model.Restaurant.Catering;
 using Brasserie.Utilities.Interfaces;
+using CommunityToolkit.Mvvm.ComponentModel;
+using CommunityToolkit.Mvvm.Input;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,37 +10,46 @@ using System.Threading.Tasks;
 
 namespace Brasserie.ViewModel
 {
-    public class MainPageViewModel
+    public partial class MainPageViewModel : BaseViewModel
     {
-
-        public MainPageViewModel(IDataAccess dataAccessService) : base()
+        //*private const string EXCEL_FILE = @"C:\Test\LePasseTemps.xlsx";
+        //*private const string JSON_FILE = @"C:\Cours\IRAM PS\ISA\ISA D\POO\MAUI Projects\Brasserie\JsonItems.json";
+        public MainPageViewModel(IDataAccess dataAccessService, IAlertService alertService) : base(alertService)
         {
-
             dataAccess = dataAccessService;
-
             Items = dataAccess.GetAllItems(); //get user's collection datas from chosen DataAccessSource (excel, csv, json...).
                                               //Tables = DataAccess.GetTables(); //get table's collection datas from chosen DataAccessSource (excel, csv, json...).
-
-
         }
-
-
         /// <summary>
         /// Manager to the data access (Csv, Json, XAML, SQL...)
         /// </summary>
         private IDataAccess dataAccess;
-
         /// <summary>
         /// Collection of all users in the databse (source file)
         /// </summary>
         public ItemsCollection Items { get; set; }
 
+
+        [ObservableProperty]
+        private Item itemUserSelection;
+
+        [RelayCommand()]
+        private async void ShowItemDetails()
+        {
+            await alertService.ShowAlert("Selection", $"Votre choix :\n{ItemUserSelection.Name}\n " +
+            $"{ItemUserSelection.Description}\n{ItemUserSelection.PictureName}");
+        }
+
         /// <summary>
-        /// Désigne l'élement sélectionné dans la liste
+        /// Indexing prices by 5.0 percent
+        /// function in Items - ItemsCollection
         /// </summary>
-        public Item ItemSelected { get; set; }
-
-
+        [RelayCommand()]
+        private void IndexPrices()
+        {
+            Items.IndexPrices(5.0);
+        }
 
     }
+
 }
