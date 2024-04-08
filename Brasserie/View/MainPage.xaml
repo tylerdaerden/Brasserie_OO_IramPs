@@ -10,6 +10,7 @@
                 <Setter Property="FontSize" Value="12" />
                 <Setter Property="WidthRequest" Value="250"/>
                 <Setter Property="BackgroundColor" Value="MediumPurple"/>
+                <Setter Property="TextColor" Value="WhiteSmoke"/>
             </Style>
             <Style x:Key="LabelDebug" TargetType="Label">
                 <Setter Property="HorizontalOptions" Value="Start" />
@@ -71,7 +72,7 @@
                 Style="{StaticResource LabelDebug}"
                                     />
 
-                <Button
+                <!--<Button
                 x:Name="buttonTestCreateFirstPersons"
                 Text=" Créer mes premières personnes"
                 Clicked="buttonTestCreateFirstPersons_Clicked"
@@ -188,7 +189,7 @@
                 Text="TestLectureSauvegardeDepuisJSON"
                 Clicked="buttonTestDataAccessJsonFile_Clicked"
                 Style="{StaticResource TestButton}"
-                            />
+                            />-->
 
                 <!--
                 <Button
@@ -231,7 +232,7 @@
                 Clicked="OnCounterClicked"
                 HorizontalOptions="Fill" />-->
 
-                <Entry x:Name="EntryCount" />
+                <!--<Entry x:Name="EntryCount" />-->
 
             </VerticalStackLayout>
             <VerticalStackLayout Grid.Column="1">
