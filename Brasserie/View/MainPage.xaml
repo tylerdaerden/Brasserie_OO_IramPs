@@ -18,166 +18,267 @@
                 <Setter Property="BackgroundColor" Value="Grey" />
                 <Setter Property="VerticalTextAlignment"  Value="Center"/>
             </Style>
+
+            <Style x:Key="ListViewStyle" TargetType="ListView">
+                <Setter Property="VerticalScrollBarVisibility" Value="Always" />
+                <!-- Autres setters pour le style si nécessaire -->
+            </Style>
+
         </ResourceDictionary>
+
+        <DataTemplate x:Key="ListViewItemTemplate">
+            <ViewCell>
+
+                <Grid Padding="5">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto" />
+                        <RowDefinition Height="Auto" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto" />
+                        <ColumnDefinition Width="Auto" />
+                    </Grid.ColumnDefinitions>
+                    <Image Grid.RowSpan="2"
+                Source="{Binding PictureName}"
+                Aspect="AspectFill"
+                HeightRequest="80"
+                WidthRequest="80" />
+                    <Label Grid.Column="1"
+                Margin="10,0,0,0"            
+                Text="{Binding Name}"
+                FontAttributes="Bold" />
+                    <Label Grid.Row="1"
+                Grid.Column="1"
+                Text="{Binding UnitPrice, StringFormat='{}{0:F2} €'}"
+                Margin="10,0,0,0"  
+                FontAttributes="Italic"
+                VerticalOptions="End" />
+                </Grid>
+
+            </ViewCell>
+
+        </DataTemplate>
+
     </ContentPage.Resources>
 
     <ScrollView>
-        <VerticalStackLayout
+
+        <Grid Margin="0,20,0,20">
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="3*"/>
+
+
+            </Grid.ColumnDefinitions>
+
+
+
+
+
+
+
+            <VerticalStackLayout
+            Grid.Column="0"
             Padding="30,0"
             Spacing="10">
 
-            <Label
+                <Label
                 x:Name="lblDebug"
                 Text="debug Text"
                 Style="{StaticResource LabelDebug}"
                                     />
 
-            <Button
+                <Button
                 x:Name="buttonTestCreateFirstPersons"
                 Text=" Créer mes premières personnes"
                 Clicked="buttonTestCreateFirstPersons_Clicked"
                 Style="{StaticResource TestButton}"
                 />
 
-            <Button
+                <Button
                x:Name="buttonTestEncapsulation"
                Text="Test encapsulation , accesseurs "
                Clicked="buttonTestEncapsulation_Clicked"
                 Style="{StaticResource TestButton}"
                             />
 
-            <Button
+                <Button
                x:Name="buttonTestStatic"
                Text="Tester Static "
                Clicked ="buttonTestStatic_Clicked"
                 Style="{StaticResource TestButton}"
                             />
 
-            <Button
+                <Button
                x:Name="buttonTestCreateItem"
                Text="Tester CreateItem "
                Clicked ="buttonTestCreateItem_Clicked"
                 Style="{StaticResource TestButton}"
                             />
 
-            <Button
+                <Button
                 x:Name="ButtonTestCateringClasses"
                 Text="Tester CateringClasses"
                 Clicked="ButtonTestCateringClasses_Clicked"
                 Style="{StaticResource TestButton}"
                             />
 
-            <Button
+                <Button
                 x:Name="ButtonTestCollection"
                 Text="Tester Collection"
                 Clicked="ButtonTestCollection_Clicked"
                 Style="{StaticResource TestButton}"
                             />
 
-            <Button
+                <Button
                 x:Name="ButtonTestOrder"
                 Text="TestOrderIem"
                 Clicked="ButtonTestOrder_Clicked"
                 Style="{StaticResource TestButton}"
                             />
 
-            <Button
+                <Button
                 x:Name="buttonTestLambdasOnCollection"
                 Text="Test Lambdas"
                 Clicked="buttonTestLambdasOnCollection_Clicked"
                 Style="{StaticResource TestButton}"
                             />
 
-            <Button
+                <Button
                 x:Name="ButtonExoLambda"
                 Text="Exo Lambda"
                 Clicked="ButtonExoLambda_Clicked"
                 Style="{StaticResource TestButton}"
                             />
 
-            <Button
+                <Button
                 x:Name="ButtonTestItemsCollection"
                 Text="TestItemCollection"
                 Clicked="ButtonTestItemsCollection_Clicked"
                 Style="{StaticResource TestButton}"
                             />
 
-            <Button
+                <Button
                 x:Name="ButtonTestCustomerCollection"
                 Text="TestCustomerCollection"
                 Clicked="ButtonTestCustomerCollection_Clicked"
                 Style="{StaticResource TestButton}"
                             />
 
-            <Button
+                <Button
                 x:Name="ButtonTestReadWriteTextFileWithList"
                 Text="ButtonTestReadWriteTextFileWithList"
                 Clicked="ButtonTestReadWriteTextFileWithList_Clicked"
                 Style="{StaticResource TestButton}"
                             />
 
-            <Button
+                <Button
                 x:Name="ButtonTestPolymorphism"
                 Text="ButtonTestPolymorphism"
                 Clicked="ButtonTestPolymorphism_Clicked"
                 Style="{StaticResource TestButton}"
                             />
 
-            <Button
+                <Button
                 x:Name="ButtonTestNew"
                 Text="ButtonTestNew"
                 Clicked="ButtonTestNew_Clicked"
                 Style="{StaticResource TestButton}"
                             />
 
-            <Button
+                <Button
                 x:Name="ButtonTestInterfaceAndDataAccess"
                 Text="TestAccèsauxDonnéesenCsv"
                 Clicked="ButtonTestInterfaceAndDataAccess_Clicked"
                 Style="{StaticResource TestButton}"
                             />
 
-            <Button
+                <Button
                 x:Name="ButtonTestExerciceGetAllStaffMembers"
                 Text="TestGetAllStaffMembers"
                 Clicked="ButtonTestExerciceGetAllStaffMembers_Clicked"
                 Style="{StaticResource TestButton}"
                             />
 
-            <Button
+                <Button
                 x:Name="buttonTestDataAccessJsonFile"
                 Text="TestLectureSauvegardeDepuisJSON"
                 Clicked="buttonTestDataAccessJsonFile_Clicked"
                 Style="{StaticResource TestButton}"
                             />
 
+                <Button
+                x:Name="buttonTestViewModel"
+                Text="TestViewModel"
+                Clicked="buttonTestViewModel_Clicked"
+                Style="{StaticResource TestButton}"
+                            />
 
-            <Image
+
+                <Image
                 Source="brewery.png"
                 HeightRequest="250"
                 Aspect="AspectFit"
                 SemanticProperties.Description="a brewery" />
 
-            <Label
+                <Label
                 Text="Bienvenue à la Brasserie INF A 2023"
                 Style="{StaticResource Headline}"
                 SemanticProperties.HeadingLevel="Level1" />
 
-            <Label
+                <Label
                 Text="Welcome to Our Brewery Project ! "
                 Style="{StaticResource SubHeadline}"
                 SemanticProperties.HeadingLevel="Level2"
                 SemanticProperties.Description="Welcome to dot net Multi platform App U I" />
 
-            <!--<Button
+                <!--<Button
                 x:Name="CounterBtn"
                 Text="Click me" 
                 SemanticProperties.Hint="Counts the number of times you click"
                 Clicked="OnCounterClicked"
                 HorizontalOptions="Fill" />-->
 
-            <Entry x:Name="EntryCount" />
-        </VerticalStackLayout>
+                <Entry x:Name="EntryCount" />
+
+            </VerticalStackLayout>
+            <VerticalStackLayout Grid.Column="1">
+                <CollectionView   ItemsSource="{Binding Items, Mode=TwoWay}" SelectionMode="Single" SelectedItem="{Binding ItemSelected}" >
+
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <Grid >
+                                <ContentView >
+                                    <Label             
+                        Text="{Binding Name}"                        
+                        VerticalOptions="Center"
+                        HorizontalTextAlignment="Center"
+
+                       />
+
+
+
+
+
+
+                                </ContentView>
+                                
+                                
+                                
+                            </Grid>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+
+                </CollectionView>
+                </VerticalStackLayout>
+                <VerticalStackLayout Grid.Column="3">
+                <ListView Grid.Column="2"   ItemsSource="{Binding Items}" SelectedItem="{Binding ItemSelected} " ItemTemplate="{StaticResource ListViewItemTemplate}" Style="{StaticResource ListViewStyle}" />
+
+            </VerticalStackLayout>
+
+        </Grid>
     </ScrollView>
 
 </ContentPage>

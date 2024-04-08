@@ -4,6 +4,9 @@ using Brasserie.Model.Restaurant.Catering;
 using Brasserie.Model.Restaurant.People;
 using Brasserie.Utilities.DataAccess;
 using Brasserie.Utilities.DataAccess.Files;
+using Brasserie.Utilities.Interfaces;
+using Brasserie.ViewModel;
+
 
 
 //using Phase;
@@ -20,6 +23,23 @@ namespace Brasserie.View
             InitializeComponent();
             myCounter = new Counter();
         }
+
+        MainPageViewModel mainPageViewModel;
+        public MainPage(MainPageViewModel mainPageVM, IDataAccess dataAccessService)
+        {
+            dataAccess = dataAccessService;
+            //MainVM = new MainPageViewModel(); remplacé par l'injection de dépendance, le paramètre dans le constructeur et le service ajouté dans MauiProgram
+            mainPageViewModel = mainPageVM ?? throw new ArgumentNullException(nameof(MainPageViewModel));
+            // Définition du BindingContext avec le ViewModel
+            BindingContext = mainPageVM;
+
+            InitializeComponent();
+        }
+
+        /// <summary>
+        /// Manager to the data access (Csv, Json, XAML, SQL...)
+        /// </summary>
+        private IDataAccess dataAccess;
 
         //private void OnCounterClicked(object sender, EventArgs e)
         //{
@@ -356,9 +376,9 @@ namespace Brasserie.View
         private void ButtonTestExerciceGetAllStaffMembers_Clicked(object sender, EventArgs e)
         {
             // CONFIG_FILE POUR TOUR ↓↓↓
-            string CONFIG_FILE = @"D:\IRAM\2023_2024\0_POO\MAUI_Projects\Brasserie\Configuration\Datas\Config.txt";
+            //string CONFIG_FILE = @"D:\IRAM\2023_2024\0_POO\MAUI_Projects\Brasserie\Configuration\Datas\Config.txt";
             // CONFIG_FILE POUR PORTABLE ↓↓↓
-            //string CONFIG_FILE = @"C:\Users\denys\Desktop\POO\MAUI Projects\Brasserie\Brasserie\Configuration\Datas\Config.txt";
+            string CONFIG_FILE = @"C:\Users\denys\Desktop\POO\MAUI Projects\Brasserie\Brasserie\Configuration\Datas\Config.txt";
             DataFilesManager dataFilesManager = new DataFilesManager(CONFIG_FILE);
             DataAccessCsvFile daCsv = new DataAccessCsvFile(dataFilesManager);
             StaffMembersCollection staffmembers = daCsv.GetAllStaffMembers();
@@ -369,9 +389,9 @@ namespace Brasserie.View
         private void buttonTestDataAccessJsonFile_Clicked(object sender, EventArgs e)
         {
             // CONFIG_FILE POUR TOUR ↓↓↓
-            string CONFIG_FILE = @"D:\IRAM\2023_2024\0_POO\MAUI_Projects\Brasserie\Configuration\Datas\Config.txt";
+            //string CONFIG_FILE = @"D:\IRAM\2023_2024\0_POO\MAUI_Projects\Brasserie\Configuration\Datas\Config.txt";
             // CONFIG_FILE POUR PORTABLE ↓↓↓
-            //string CONFIG_FILE = @"C:\Users\denys\Desktop\POO\MAUI Projects\Brasserie\Brasserie\Configuration\Datas\Config.txt";
+            string CONFIG_FILE = @"C:\Users\denys\Desktop\POO\MAUI Projects\Brasserie\Brasserie\Configuration\Datas\Config.txt";
             DataFilesManager dataFilesManager = new DataFilesManager(CONFIG_FILE);
             DataAccessJsonFile da = new DataAccessJsonFile(dataFilesManager);
             ItemsCollection items = da.GetAllItems();
@@ -383,6 +403,15 @@ namespace Brasserie.View
             //test de Delete Item
             //items.DeleteItem(items[0]);
             da.UpdateAllItemsDatas(items);//sauvegarde des données
+
+        }
+
+        private void buttonTestViewModel_Clicked(object sender, EventArgs e)
+        {
+
+            ItemsCollection items = mainPageViewModel.Items;
+            lblDebug.Text = mainPageViewModel.ItemSelected.Name;
+
 
         }
     }
