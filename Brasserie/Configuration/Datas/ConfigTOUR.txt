@@ -1,5 +1,0 @@
-FOLDER,D:\IRAM\2023_2024\0_POO\MAUI_Projects\Brasserie\Configuration\Datas\Json\
-ITEMS,Items.json
-TABLES,Tables.json
-CUSTOMERS,Customers.json
-STAFFMEMBERS,StaffMembers.json
