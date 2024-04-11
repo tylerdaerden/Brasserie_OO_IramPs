@@ -194,7 +194,7 @@
       "Id": 19,
       "UnitPrice": 2.7,
       "VatRate": 21.0,
-      "PictureName": "BuschTriple125.jpg"
+      "PictureName": "buschtriple125.png"
     },
     {
       "$type": "Brasserie.Model.Restaurant.Catering.Beer, Brasserie",
@@ -208,7 +208,7 @@
       "Id": 20,
       "UnitPrice": 5.2,
       "VatRate": 21.0,
-      "PictureName": "BuschTriple125.jpg"
+      "PictureName": "buschtriple125.png"
     },
     {
       "$type": "Brasserie.Model.Restaurant.Catering.Beer, Brasserie",
