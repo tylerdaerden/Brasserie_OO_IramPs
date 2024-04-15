@@ -50,6 +50,23 @@ namespace Brasserie.ViewModel
             Items.IndexPrices(5.0);
         }
 
-    }
+        [RelayCommand()]
+        private async void TestBindingShowProperties()
+        {
+            await alertService.ShowAlert("Infos Resto ", $"En interne, les valeur des propriétés sont : " +
+            $"\n{MainInfos.Name}\n{MainInfos.Address}\n{MainInfos.WebSite}\n{MainInfos.VatCode}");
+        }
+        [RelayCommand()]
+        private async void TestBindingChangeProperties()
+        {
+            MainInfos.Name = "Iram Ps Food";
+            MainInfos.Address = "4 rue du grand jour 7131 Beaumont";
+            MainInfos.WebSite = "http://irampsfoodservice.com";
+            MainInfos.VatCode = "BE 0202.239.951";
+        }
+
+
+
+    }//end class
 
 }

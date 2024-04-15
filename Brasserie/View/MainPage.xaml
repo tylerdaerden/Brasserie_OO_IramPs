@@ -198,7 +198,7 @@
                 Clicked="buttonTestViewModel_Clicked"
                 Style="{StaticResource TestButton}"
                             /> -->
-                
+
 
                 <Button
                     x:Name="buttonTestDisplayAlert"
@@ -243,16 +243,19 @@
                     />
                 <ListView ItemsSource="{Binding Items}" SelectedItem="{Binding ItemUserSelection} " ItemTemplate="{StaticResource ListViewItemTemplate}" Style="{StaticResource ListViewStyle}" />
             </VerticalStackLayout>
+            
             <VerticalStackLayout Grid.Column="2">
                 <Label
                     Text="Votre sélection :"
                     HorizontalOptions="Center"
-                    />
+                    />                
+                
                 <Label Margin="0, 20, 0, 0"
                     Text="{Binding ItemUserSelection.Name}"
                     FontAttributes ="Bold"
                     HorizontalOptions="Center"
                     />
+                
                 <Button
                     Margin="50"
                     Text="Open item details"
@@ -266,10 +269,81 @@
                     Command="{Binding IndexPricesCommand}"
                     HorizontalOptions="Center"
                     />
+
+                <Label
+                    Margin="0,20,0,0"
+                    Text="Nom du restaurant :"
+                    FontAttributes ="Bold"
+                    HorizontalOptions="Start"
+                    />
+                
+                <Entry
+                    Text="{Binding MainInfos.Name}"
+                    FontAttributes ="Bold"
+                    HorizontalOptions="Start"
+                    WidthRequest="250"
+                    />
+
+                <Label
+                    Margin="0,20,0,0"
+                    Text="Adresse du restaurant :"
+                    FontAttributes ="Bold"
+                    HorizontalOptions="Start"
+                    />
+
+                <Entry
+                    Text="{Binding MainInfos.Address}"
+                    FontAttributes ="Bold"
+                    HorizontalOptions="Start"
+                    WidthRequest="250"
+                    />
+
+                <Label
+                    Margin="0,20,0,0"
+                    Text="WebSite :"
+                    FontAttributes ="Bold"
+                    HorizontalOptions="Start"
+                    />
+                
+                <Entry
+                    Text="{Binding MainInfos.WebSite}"
+                    FontAttributes ="Bold"
+                    HorizontalOptions="Start"
+                    WidthRequest="250"
+                    />
+
+                <Label
+                    Margin="0,20,0,0"
+                    Text="N° TVA :"
+                    FontAttributes ="Bold"
+                    HorizontalOptions="Start"
+                    />
+
+                <Entry
+                    Text="{Binding MainInfos.VatCode}"
+                    FontAttributes ="Bold"
+                    HorizontalOptions="Start"
+                    WidthRequest="250"
+                    />
+                
+                <Button
+                    Margin="0,10,0,0"
+                    Text="Voir les infos du restaurant"
+                    Command="{Binding TestBindingShowPropertiesCommand}"
+                    Style="{StaticResource TestButton}"
+                    />
+                
+                <Button
+                    Margin="0,10,0,0"
+                    Text="Changer les propriétés"
+                    Command="{Binding TestBindingChangePropertiesCommand}"
+                    Style="{StaticResource TestButton}"
+                    />
+
             </VerticalStackLayout>
         </Grid>
 
-        
+
     </ScrollView>
 
 </ContentPage>

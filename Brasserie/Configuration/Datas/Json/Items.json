@@ -51,7 +51,7 @@
       "Name": "Brochettes du chef",
       "Description": "Brochette de boeuf, frite et salade",
       "Id": 6,
-      "UnitPrice": 99.9,
+      "UnitPrice": 19.9,
       "VatRate": 21.0,
       "PictureName": "brochette_boeuf.jpg"
     },
