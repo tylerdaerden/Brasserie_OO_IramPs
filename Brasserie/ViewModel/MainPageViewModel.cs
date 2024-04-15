@@ -60,7 +60,7 @@ namespace Brasserie.ViewModel
         private async void TestBindingChangeProperties()
         {
             MainInfos.Name = "Iram Ps Food";
-            MainInfos.Address = "4 rue du grand jour 7131 Beaumont";
+            MainInfos.Address = "4, rue du grand jour 7131 Beaumont";
             MainInfos.WebSite = "http://irampsfoodservice.com";
             MainInfos.VatCode = "BE 0202.239.951";
         }
