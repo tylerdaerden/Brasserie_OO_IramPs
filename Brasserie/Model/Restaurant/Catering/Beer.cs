@@ -27,9 +27,17 @@ namespace Brasserie.Model.Restaurant.Catering
 
         #region Props
 
-        public bool IsAbbeyBeer { get => _isAbbeyBeer; set => _isAbbeyBeer = value ; }
+        public bool IsAbbeyBeer 
+        { 
+            get => _isAbbeyBeer; 
+            set => _isAbbeyBeer = value ; 
+        }
 
-        public bool IsTrappistBeer { get => _isTrappistBeer; set => _isTrappistBeer = value ; }
+        public bool IsTrappistBeer 
+        { 
+            get => _isTrappistBeer; 
+            set => _isTrappistBeer = value ; 
+        }
 
         #endregion
 
