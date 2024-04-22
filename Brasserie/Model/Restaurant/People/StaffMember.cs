@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
@@ -10,13 +12,15 @@ namespace Brasserie.Model.Restaurant.People
     /// <summary>
     /// This class concern general staff member employee who receives a salary 
     /// </summary>
-    public class StaffMember : Person
+    public class StaffMember : Person 
     {
+
         #region Attributs
 
         private string _bankAccount;
         private string _address;
         private double _salary;
+   
 
         #endregion
 
@@ -50,6 +54,7 @@ namespace Brasserie.Model.Restaurant.People
                 {
                     _bankAccount = value;
                 }
+                OnPropertyChanged(nameof(BankAccount));
             }
         }
 
@@ -65,7 +70,9 @@ namespace Brasserie.Model.Restaurant.People
                 {
                     _address = value;
                 }
+                OnPropertyChanged(nameof(Address));
             }
+
         }
 
         /// <summary>
@@ -80,6 +87,7 @@ namespace Brasserie.Model.Restaurant.People
                 {
                     _salary = value;
                 }
+                OnPropertyChanged(nameof(Salary));
             }
         }
 
@@ -163,7 +171,9 @@ namespace Brasserie.Model.Restaurant.People
         private bool CheckSalary(double trySalary)
         {
             return trySalary > 0;
-        } 
+        }
+
+
 
         #endregion
     }

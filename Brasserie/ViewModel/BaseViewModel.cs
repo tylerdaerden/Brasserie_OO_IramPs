@@ -17,6 +17,8 @@ namespace Brasserie.ViewModel
             MainInfos = new MainInformations("My Restaurant", "4, rue de la Lys 7000 Mons", "BE 0563.191.043", "http://myrestaurant.be");
         }
 
+
+
         public MainInformations MainInfos { get; set; }
 
         protected IAlertService alertService;

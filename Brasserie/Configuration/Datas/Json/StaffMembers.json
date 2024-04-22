@@ -1,35 +1,104 @@
 {
-  "$type": "Brasserie.Model.Restaurant.People.CustomersCollection, Brasserie",
-  "$values": [
-    {
-      "$type": "Brasserie.Model.Restaurant.People.Customer, Brasserie",
-      "Type": 0,
-      "Id": 1,
-      "LastName": "Beumier",
-      "FirstName": "Damien",
-      "Gender": true,
-      "Email": "beumierdamien@gmail.com",
-      "MobilePhoneNumber": null
-    },
-    {
-      "$type": "Brasserie.Model.Restaurant.People.Customer, Brasserie",
-      "Type": 0,
-      "Id": 2,
-      "LastName": null,
-      "FirstName": "Sophie",
-      "Gender": false,
-      "Email": "deroisinsophie@gmail.com",
-      "MobilePhoneNumber": null
-    },
-    {
-      "$type": "Brasserie.Model.Restaurant.People.Customer, Brasserie",
-      "Type": 0,
-      "Id": 3,
-      "LastName": "Darmani",
-      "FirstName": "Izaak",
-      "Gender": true,
-      "Email": "darmani2345@gmail.com",
-      "MobilePhoneNumber": null
-    }
-  ]
-}
+    "$type": "Brasserie.Model.Restaurant.People.StaffMembersCollection, Brasserie",
+    "$values": [
+      {
+        "$type": "Brasserie.Model.Restaurant.People.StaffMember, Brasserie",
+        "BankAccount": "BE84 5679 9034 2356",
+        "Address": null,
+        "Id": 20,
+        "LastName": "Fritz",
+        "FirstName": "Hector",
+        "Gender": true,
+        "Email": "fritzhector@gmail.com",
+        "MobilePhoneNumber": "0487567980"
+      },
+      {
+        "$type": "Brasserie.Model.Restaurant.People.StaffMember, Brasserie",
+        "BankAccount": "BE84 7090 3456 2390",
+        "Address": "16, rue grande 7000 LosAngeles",
+        "Id": 21,
+        "LastName": "Swift",
+        "FirstName": "Taylor",
+        "Gender": false,
+        "Email": "taylor999@gmail.com",
+        "MobilePhoneNumber": "0485789033"
+      },
+      {
+        "$type": "Brasserie.Model.Restaurant.People.StaffMember, Brasserie",
+        "BankAccount": "BE90 3456 7892 2345",
+        "Address": "203, rue des pres 7100 Soignies",
+        "Id": 22,
+        "LastName": "Renard",
+        "FirstName": "Fred",
+        "Gender": true,
+        "Email": "fredrenard01@gmail.com",
+        "MobilePhoneNumber": "0485789056"
+      },
+      {
+        "$type": "Brasserie.Model.Restaurant.People.StaffMember, Brasserie",
+        "BankAccount": "BE00 0000 0000 0000",
+        "Address": "1, rue 1000 Ville",
+        "Id": 23,
+        "LastName": "Dulieux",
+        "FirstName": "Lucia",
+        "Gender": false,
+        "Email": "youremail@gmail.be",
+        "MobilePhoneNumber": "0470000000"
+      },
+      {
+        "$type": "Brasserie.Model.Restaurant.People.StaffMember, Brasserie",
+        "BankAccount": "BE40 7788 9933 2403",
+        "Address": "234, rue grande 7120 Estinnes",
+        "Id": 24,
+        "LastName": "Darani",
+        "FirstName": "Yasmina",
+        "Gender": false,
+        "Email": "daraniyas@gmail.com",
+        "MobilePhoneNumber": "0479445599"
+      },
+      {
+        "$type": "Brasserie.Model.Restaurant.People.StaffMember, Brasserie",
+        "BankAccount": "BE89 0456 2389 1290",
+        "Address": "40, rue du village 5690 Jemappes",
+        "Id": 25,
+        "LastName": "Lipa",
+        "FirstName": "Dua",
+        "Gender": false,
+        "Email": "dualipa@gmail.com",
+        "MobilePhoneNumber": "0479094578"
+      },
+      {
+        "$type": "Brasserie.Model.Restaurant.People.StaffMember, Brasserie",
+        "BankAccount": "BE80 4567 8904 5679",
+        "Address": "4, rue verte 7030 Ciply",
+        "Id": 26,
+        "LastName": "Maggio",
+        "FirstName": "Emilia",
+        "Gender": false,
+        "Email": "maggioemilia@gmail.com",
+        "MobilePhoneNumber": "0479805678"
+      },
+      {
+        "$type": "Brasserie.Model.Restaurant.People.StaffMember, Brasserie",
+        "BankAccount": "BE43 5679 0221 3488",
+        "Address": "456, rue de Mons 7090 Nimy",
+        "Id": 27,
+        "LastName": "Pignon",
+        "FirstName": "Jean",
+        "Gender": true,
+        "Email": "pignonj@gmail.com",
+        "MobilePhoneNumber": "0479805678"
+      },
+      {
+        "$type": "Brasserie.Model.Restaurant.People.StaffMember, Brasserie",
+        "BankAccount": "BE00 0000 4567 8900",
+        "Address": "45, rue machin 1000 Ville",
+        "Id": 28,
+        "LastName": "Dumont",
+        "FirstName": "Francois",
+        "Gender": true,
+        "Email": "youremail@gmail.com",
+        "MobilePhoneNumber": "0478907966"
+      }
+    ]
+  }

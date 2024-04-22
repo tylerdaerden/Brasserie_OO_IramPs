@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
@@ -9,8 +11,11 @@ namespace Brasserie.Model.Restaurant.People
 {
     //#nullable disable
 
-    public abstract class Person
+    public abstract class Person : INotifyPropertyChanged
     {
+        //implementation de INotifyPropertyChanged
+        public event PropertyChangedEventHandler? PropertyChanged;
+
         #region Attributs
 
         //Champs de classe
@@ -22,6 +27,8 @@ namespace Brasserie.Model.Restaurant.People
         private string _mobilePhoneNumber;
         //Champs Static
         private static int _totalPersons;
+
+
 
         #endregion
 
@@ -46,23 +53,12 @@ namespace Brasserie.Model.Restaurant.People
         {
             TotalPersons++;
         }
-        
+
         #endregion
+
+
 
         #region Props
-
-        #region Props Automatique (sans vérification)
-        //public int Id { get; set; }
-        //public string LastName { get; set; }
-        //public string FirstName { get; set; }
-        //public bool Gender { get; set; }
-        //public string Email { get; set; }
-        //public string MobilePhoneNumber { get; set; } 
-
-        //cette soluce ne fait pas de vérification donc quand même garder ou mieux analyser Soluce Cours pour plus tard
-        #endregion
-
-        #region Props Soluce Cours (Avec Vérifications)
 
         /// <summary>
         /// Id number
@@ -80,6 +76,7 @@ namespace Brasserie.Model.Restaurant.People
                 {
                     _lastName = value;
                 }
+                OnPropertyChanged(nameof(LastName));
             }
         }
         /// <summary>
@@ -94,6 +91,7 @@ namespace Brasserie.Model.Restaurant.People
                 {
                     _firstName = value;
                 }
+                OnPropertyChanged(nameof(FirstName));
             }
         }
         /// <summary>
@@ -112,6 +110,7 @@ namespace Brasserie.Model.Restaurant.People
                 {
                     _email = value;
                 }
+                OnPropertyChanged(nameof(Email));
             }
         }
         /// <summary>
@@ -126,6 +125,7 @@ namespace Brasserie.Model.Restaurant.People
                 {
                     _mobilePhoneNumber = value;
                 }
+                OnPropertyChanged(nameof(MobilePhoneNumber));
             }
         }
 
@@ -136,7 +136,14 @@ namespace Brasserie.Model.Restaurant.People
         {
             get => _totalPersons; private set => _totalPersons = value;
 
-        }
+        } 
+
+        #endregion
+
+
+
+        #region Methodes Verification
+
         /// <summary>
         /// Check LastName or FirstName
         /// MAJ start each part, no double space or -, no special character, no accented character like éèê
@@ -220,17 +227,23 @@ namespace Brasserie.Model.Restaurant.People
                 return true;
             }
             return false;
+        } 
+
+        #endregion
+
+
+        #region Methodes
+
+        /// <summary>
+        /// Methode PropertyChanged ↓↓↓
+        /// </summary>
+        /// <param name="propertyName"></param>
+        protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
 
-
-
-
-
-
         #endregion
-
-        #endregion
-
 
     }//end class
 

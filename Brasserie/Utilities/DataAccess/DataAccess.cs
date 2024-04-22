@@ -66,6 +66,7 @@ namespace Brasserie.Utilities.DataAccess
         public abstract TablesCollection GetTables();
         public abstract CustomersCollection GetAllCustomers();
         public abstract StaffMembersCollection GetAllStaffMembers();
+        public abstract bool UpdateAllStaffMembers(StaffMembersCollection staffMembers);
 
         /// <summary>
         /// Check AccessPath to the data source file. File path must exist and if

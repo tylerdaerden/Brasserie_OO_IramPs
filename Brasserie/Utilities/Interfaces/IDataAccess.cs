@@ -41,5 +41,13 @@ namespace Brasserie.Utilities.Interfaces
         StaffMembersCollection GetAllStaffMembers();
         //All CRUD methods must be added here
 
+        /// <summary>
+        /// update source from the actual StaffMembersCollection
+        /// </summary>
+        /// <param name="staffMembers"></param>
+        /// <returns></returns>
+        bool UpdateAllStaffMembers(StaffMembersCollection staffMembers);
+
+
     }
 }

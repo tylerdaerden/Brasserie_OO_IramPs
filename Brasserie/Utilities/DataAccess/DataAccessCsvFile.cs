@@ -216,7 +216,7 @@ namespace Brasserie.Utilities.DataAccess
                     StaffMember sm = GetStaffMember(s);
                     if (sm != null)
                     {
-                        staffmembers.AddStaffmember(sm);
+                        staffmembers.AddStaffMember(sm);
                     }
                 }
                 return staffmembers;
@@ -232,10 +232,15 @@ namespace Brasserie.Utilities.DataAccess
 
         /// <summary>
         ///Convert "0" or "1" from csv File to bool type false or true
-        ////// </summary>
+        /// </summary>
         static private bool CvrtstrToBool(string field)
         {
             return Convert.ToBoolean(int.Parse(field));
+        }
+
+        public override bool UpdateAllStaffMembers(StaffMembersCollection staffMembers)
+        {
+            throw new NotImplementedException();
         }
 
     }//end class DataAccessCsvFile

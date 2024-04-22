@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
@@ -7,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Brasserie.Model.Restaurant.People
 {
-    public class Manager : StaffMember
+    public class Manager : StaffMember , INotifyPropertyChanged
     {
 
         //déclaration des constantes

@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<toolkit:Popup xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Brasserie.View.NewStaffMemberPopup"
+               xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit">
+    <Frame BorderColor="SteelBlue">
+    <VerticalStackLayout>
+            <Label
+                Text="Staff member"
+                VerticalOptions="Center"
+                HorizontalOptions="Center"
+            />
+            <Label
+                Text="Nom :"
+                VerticalOptions="Center"
+                HorizontalOptions="Start"
+            />
+            <Entry
+                Text="{Binding StaffMemberPopupDisplayed.LastName}"
+                FontAttributes ="Bold"
+                HorizontalOptions="Start"
+                WidthRequest="250"
+            />
+            <Label
+                Text="Prénom :"
+                VerticalOptions="Center"
+                HorizontalOptions="Start"
+            />
+            <Entry
+                Text="{Binding StaffMemberPopupDisplayed.FirstName}"
+                FontAttributes ="Bold"
+                HorizontalOptions="Start"
+                WidthRequest="250"
+            />
+            <Label
+                Text="Mobile :"
+                VerticalOptions="Center"
+                HorizontalOptions="Start"
+            />
+            <Entry
+                Text="{Binding StaffMemberPopupDisplayed.MobilePhoneNumber}"
+                FontAttributes ="Bold"
+                HorizontalOptions="Start"
+                WidthRequest="250"
+            />
+            <Label
+                Text="Email :"
+                VerticalOptions="Center"
+                HorizontalOptions="Start"
+            />
+            <Entry
+                Text="{Binding StaffMemberPopupDisplayed.Email}"
+                FontAttributes ="Bold"
+                HorizontalOptions="Start"
+                WidthRequest="250"
+            />
+            <Label
+                Text="Sexe Masc :"
+                VerticalOptions="Center"
+                HorizontalOptions="Start"
+            />
+            <CheckBox
+            IsChecked="{Binding StaffMemberPopupDisplayed.Gender}"
+            />
+            <Label
+                Text="Adresse :"
+                VerticalOptions="Center"
+                HorizontalOptions="Start"
+            />
+            <Entry
+                Text="{Binding StaffMemberPopupDisplayed.Address}"
+                FontAttributes ="Bold"
+                HorizontalOptions="Start"
+                WidthRequest="250"
+            />
+            <Label
+                Text="N° de compte bancaire :"
+                VerticalOptions="Center"
+                HorizontalOptions="Start"
+            />
+            <Entry
+                Text="{Binding StaffMemberPopupDisplayed.BankAccount}"
+                FontAttributes ="Bold"
+                HorizontalOptions="Start"
+                WidthRequest="250"
+            />
+            <Button
+                Margin="0,10,0,0"
+                Text="Ajouter le membre"
+                IsVisible="{Binding IsNewMemberAction}"
+                Command="{Binding AddNewStaffMemberCommand}"
+                WidthRequest="150"
+                BackgroundColor="Grey"
+                VerticalOptions="Center"
+                HeightRequest="20"
+            />
+            <Button
+                Margin="0,10,0,0"
+                x:Name="buttonClose"
+                Text="Fermer"
+                Clicked="buttonClose_Clicked"
+                WidthRequest="150"
+                BackgroundColor="Grey"
+                HorizontalOptions="Center"
+                HeightRequest="20"
+            />
+
+        </VerticalStackLayout>
+    </Frame>
+</toolkit:Popup>

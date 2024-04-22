@@ -114,6 +114,7 @@ namespace Brasserie.Model.Restaurant.Catering
                 {
                     _vatRate = value;
                 }
+                OnPropertyChanged(nameof(VatRate));
             }
         }
 
@@ -126,6 +127,7 @@ namespace Brasserie.Model.Restaurant.Catering
                 {
                     _pictureName = value;
                 }
+                OnPropertyChanged(nameof(PictureName));
             }
         }
 

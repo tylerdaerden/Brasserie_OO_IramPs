@@ -66,6 +66,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
+		<PackageReference Include="CommunityToolkit.Maui" Version="8.0.1" />
 		<PackageReference Include="CommunityToolkit.Mvvm" Version="8.2.2" />
 		<PackageReference Include="Microsoft.Maui.Controls" Version="8.0.14" />
 		<PackageReference Include="Microsoft.Maui.Controls.Compatibility" Version="8.0.14" />
@@ -78,6 +79,15 @@
 	  <Folder Include="Model\Restaurant\Planning\" />
 	  <Folder Include="Utilities\DataAccess\Files\" />
 	  <Folder Include="Utilities\EntriesValidations\" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <MauiXaml Update="View\NewStaffMemberPopup.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="View\StaffMembersPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	</ItemGroup>
 
 </Project>

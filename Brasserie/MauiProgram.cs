@@ -5,6 +5,7 @@ using Brasserie.Utilities.Services;
 using Brasserie.View;
 using Brasserie.ViewModel;
 using Microsoft.Extensions.Logging;
+using CommunityToolkit.Maui;
 
 namespace Brasserie
 {
@@ -13,19 +14,18 @@ namespace Brasserie
         //chemin pour TOUR
         private const string CONFIG_FILE = @"D:\IRAM\2023_2024\0_POO\MAUI_Projects\Brasserie\Configuration\Datas\Config.txt";
         //chemin pour portable
-       //private const string CONFIG_FILE = @"C:\Users\denys\Desktop\POO\MAUI Projects\Brasserie\Brasserie\Configuration\Datas\Config.txt";
-
+        //private const string CONFIG_FILE = @"C:\Users\denys\Desktop\POO\MAUI Projects\Brasserie\Brasserie\Configuration\Datas\Config.txt";
         public static MauiApp CreateMauiApp()
         {
             var builder = MauiApp.CreateBuilder();
             builder
                 .UseMauiApp<App>()
                 .ConfigureFonts(fonts =>
-                {
-                    fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
-                    fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
-                });
-
+            {
+                fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
+                fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
+            })
+                .UseMauiCommunityToolkit();
             DataFilesManager dataFilesManager = new DataFilesManager(CONFIG_FILE);
             /*
             Services.AddSingleton() permet de faire de l'injection de dépendance dans le constructeur des ViewModel par exemple
@@ -37,15 +37,14 @@ namespace Brasserie
             //Singleton for AlertServiceDisplay
             builder.Services.AddSingleton<IAlertService>(new AlertServiceDisplay());
             builder.Services.AddSingleton<IDataAccess>(new DataAccessJsonFile(dataFilesManager));
-
             //permet de faire de l'injection de dépendance dans le constructeur de la MainPage sans devoir faire un new MainPageViewModel() dans celui-ci
             builder.Services.AddTransient<MainPageViewModel>();
             builder.Services.AddTransient<MainPage>();
-
+            builder.Services.AddTransient<StaffMembersPageViewModel>();
+            builder.Services.AddTransient<StaffMembersPage>();
 #if DEBUG
             builder.Logging.AddDebug();
 #endif
-
             return builder.Build();
         }
     }

@@ -144,25 +144,29 @@ namespace Brasserie.Utilities.DataAccess
             }
         }
 
+
         /// <summary>
-        /// update json source file from the customers collection
+        /// update json source file from the staffmembers collection
         /// </summary>
         /// <param name="uc"></param>
-        public void UpdateAllStaffMembers(StaffMembersCollection staffMembers)
+        public override bool UpdateAllStaffMembers(StaffMembersCollection staffMembers)
         {
             AccessPath = DataFilesManager.DataFiles.GetFilePathByCodeFunction("STAFFMEMBERS");
             if (IsValidAccessPath)
             {
                 JsonSerializerSettings settings = new JsonSerializerSettings { TypeNameHandling = TypeNameHandling.All };
                 string json = JsonConvert.SerializeObject(staffMembers, Formatting.Indented, settings);
-
                 File.WriteAllText(AccessPath, json);
+                return true;
             }
             else
             {
                 Console.WriteLine("UpdateAllCustomersDatas error can't update datasource file");
+                return false;
             }
         }
+
+
         /// <summary>
         /// Retrieve all staff members datas from json file code STAFFMEMBERS
         /// </summary>
