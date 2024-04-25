@@ -35,19 +35,27 @@ namespace Brasserie.Model.Restaurant.People
             }
         }
 
-        //public bool RemoveStaffMember(StaffMember sm) 
-        //{
-        //    if()
-        //    {
 
-        //    }
-        //    else
-        //    {
-        //        return false;
-        //    }
+        /// <summary>
+        /// Removal of a staff Member to the collection if  already a similar id or (firstName and LastName) in this collection
+        /// </summary>
+        /// <param name="sm"></param>
+        /// <returns></returns>
+        public bool RemoveStaffMember(StaffMember sm)
+        {
+            if (this.Any(staffMemberInTheCollection => staffMemberInTheCollection.Id == sm.Id || (staffMemberInTheCollection.LastName == sm.LastName && staffMemberInTheCollection.FirstName == sm.FirstName)))
+            {
+                this.Remove(sm);
+                return true;
 
+            }
+            else
+            {
+                //if StaffMember not in the collection 
+                return false;
+            }
 
-        //}
+        }
 
 
         /// <summary>
