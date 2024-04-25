@@ -41,9 +41,9 @@ namespace Brasserie.Model.Restaurant.People
         /// </summary>
         /// <param name="sm"></param>
         /// <returns></returns>
-        public bool RemoveStaffMember(StaffMember sm)
+        public bool RemoveStaffMember(StaffMember sm) //on peut remplacer bool par string et gérer messages erreurs selon cas , later ! pour gérer cas de selection nulle.
         {
-            if (this.Any(staffMemberInTheCollection => staffMemberInTheCollection.Id == sm.Id || (staffMemberInTheCollection.LastName == sm.LastName && staffMemberInTheCollection.FirstName == sm.FirstName)))
+            if ( this.Count!=0 && sm != null && this.Any(staffMemberInTheCollection => staffMemberInTheCollection.Id == sm.Id ))
             {
                 this.Remove(sm);
                 return true;

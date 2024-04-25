@@ -7,6 +7,7 @@ using CommunityToolkit.Mvvm.Input;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -99,6 +100,40 @@ namespace Brasserie.ViewModel
             };
             //reset the property for a future choice.
             IsNewMemberAction = false;
+        }
+
+        /// <summary>
+        /// Command Binded to the "Remove Member" button to the selected 
+        /// </summary>
+        [RelayCommand()]
+
+        public async void RemoveStaffMember()
+        {
+            if (StaffMemberSelection != null)
+            {
+
+                if (await alertService.ShowConfirmation($"Cette opération supprimera {StaffMemberSelection.FirstName} {StaffMemberSelection.LastName} ", "Êtes vous sûr ?"))
+                {
+                    string firstname = StaffMemberSelection.FirstName;
+                    string lastname = StaffMemberSelection.LastName;
+                    if (StaffMembers.RemoveStaffMember(StaffMemberSelection))
+                    {
+                        //await pas nécessaire car pas d'appel ou de code après 
+                        alertService.ShowAlert("Suppression effectuée", $"{firstname} {lastname} a bien été supprimé.e");
+                    }
+                    else
+                    {
+                        //await pas nécessaire car pas d'appel ou de code après 
+                        alertService.ShowAlert("Erreur de Suppression", $"Une erreur est survenue lors de la supression de {firstname} {lastname} ");
+                    }
+                }
+            }
+
+            else 
+            {
+                alertService.ShowAlert("Erreur" , "Pas de Selection de membre");
+            }
+
         }
 
         /// <summary>
