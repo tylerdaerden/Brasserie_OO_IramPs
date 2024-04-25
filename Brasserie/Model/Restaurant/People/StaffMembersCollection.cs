@@ -35,6 +35,21 @@ namespace Brasserie.Model.Restaurant.People
             }
         }
 
+        //public bool RemoveStaffMember(StaffMember sm) 
+        //{
+        //    if()
+        //    {
+
+        //    }
+        //    else
+        //    {
+        //        return false;
+        //    }
+
+
+        //}
+
+
         /// <summary>
         /// Determine new next id (max + 1) for a manual AddItem
         /// </summary>

@@ -125,7 +125,7 @@ namespace Brasserie.Model.Restaurant.People
                 {
                     _mobilePhoneNumber = value;
                 }
-                OnPropertyChanged(nameof(MobilePhoneNumber));
+               OnPropertyChanged(nameof(MobilePhoneNumber));
             }
         }
 
