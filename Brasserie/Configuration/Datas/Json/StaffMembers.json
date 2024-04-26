@@ -88,6 +88,17 @@
       "Gender": true,
       "Email": "pignonj@gmail.com",
       "MobilePhoneNumber": "0479805678"
+    },
+    {
+      "$type": "Brasserie.Model.Restaurant.People.StaffMember, Brasserie",
+      "BankAccount": "BE00 0000 4567 8900",
+      "Address": "45, rue machin 1000 Ville",
+      "Id": 28,
+      "LastName": "Dumont",
+      "FirstName": "Francois",
+      "Gender": true,
+      "Email": "youremail@gmail.com",
+      "MobilePhoneNumber": "0478907966"
     }
   ]
 }
