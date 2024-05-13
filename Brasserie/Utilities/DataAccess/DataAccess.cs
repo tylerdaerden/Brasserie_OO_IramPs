@@ -41,7 +41,21 @@ namespace Brasserie.Utilities.DataAccess
         {
             this.DataFilesManager = dfm;
         }
+
+        /// <summary>
+        /// Constructor associated with a DatafileManager object, it will contains all datas files informations (path subject)
+        /// </summary>
+        /// <param name="dfm"></param>
+        public DataAccess(DataFilesManager dfm, IAlertService alertService)
+        {
+
+            this.DataFilesManager = dfm;
+            this.alertService = alertService;
+        }
+
+        protected IAlertService alertService;
         public DataFilesManager DataFilesManager { get; set; }
+
         /// <summary>
         /// AccessPath file to the data source
         /// </summary>

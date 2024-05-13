@@ -1,0 +1,3 @@
+FOLDER,NOT_USED
+CONNECTION_STRING,Data Source=PORTABLE_DENYS\DATAIRAMPS;Initial Catalog=BrasserieDatabase;User Id = IRAM_USER; Password = 123456;Encrypt=true; TrustServerCertificate=true
+RESTAURANT_NAME,Iram Ps Food Service

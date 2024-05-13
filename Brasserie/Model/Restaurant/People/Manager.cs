@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Brasserie.Model.Restaurant.People
 {
-    public class Manager : StaffMember , INotifyPropertyChanged
+    public class Manager : StaffMember, INotifyPropertyChanged
     {
 
         //déclaration des constantes
@@ -34,6 +34,12 @@ namespace Brasserie.Model.Restaurant.People
               : base(id, lastName, firstName, gender, email, phone, bankAccount, address, salary)
         {
             BuildLogin();
+            Password = password;
+        }
+
+        public Manager(int id, string lastName, string firstName, bool gender, string email, string phone, string bankAccount, string address, double salary, string login, string password) : base(id, lastName, firstName, gender, email, phone, bankAccount, address, salary)
+        {
+            Login = login; //other method -> login from datasource
             Password = password;
         }
 
