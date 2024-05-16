@@ -11,7 +11,7 @@ namespace Brasserie
 {
     public static class MauiProgram
     {
-
+        //config file pour portable ↓↓↓
         private const string CONFIG_FILE = @"C:\Users\denys\Desktop\POO\MAUI Projects\Brasserie\Brasserie\Configuration\Datas\Config.txt";
         public static MauiApp CreateMauiApp()
         {

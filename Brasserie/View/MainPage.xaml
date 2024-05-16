@@ -72,6 +72,7 @@
                 Style="{StaticResource LabelDebug}"
                                     />
 
+                <!--#region OLD BUTTONS DEPRECIATED CODE -->
                 <!--<Button
                 x:Name="buttonTestCreateFirstPersons"
                 Text=" Créer mes premières personnes"
@@ -206,6 +207,7 @@
                     Clicked="buttonTestDisplayAlert_Clicked"
                     Style="{StaticResource TestButton}"
                             />
+                <!--#endregion-->
 
 
                 <Image
