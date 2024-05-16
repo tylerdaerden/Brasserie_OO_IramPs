@@ -1,3 +1,3 @@
 FOLDER,NOT_USED
-CONNECTION_STRING,Data Source=PORTABLE_DENYS\DATAIRAMPS;Initial Catalog=BrasserieDatabase;Integrated Security=True;Encrypt=True;Trust Server Certificate=True
+CONNECTION_STRING,Data Source=TOURPCDANY\DATAVIZ;Initial Catalog=BrasserieDatabase;Integrated Security=True;Encrypt=True;Trust Server Certificate=True
 RESTAURANT_NAME,Iram Ps Food Service

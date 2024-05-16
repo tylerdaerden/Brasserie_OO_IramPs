@@ -11,8 +11,10 @@ namespace Brasserie
 {
     public static class MauiProgram
     {
-        //config file pour portable ↓↓↓
-        private const string CONFIG_FILE = @"C:\Users\denys\Desktop\POO\MAUI Projects\Brasserie\Brasserie\Configuration\Datas\Config.txt";
+        //chemin config file pour PORTABLE ↓↓↓
+        //private const string CONFIG_FILE = @"C:\Users\denys\Desktop\POO\MAUI Projects\Brasserie\Brasserie\Configuration\Datas\Config.txt";
+        //chemin config file pour TOUR ↓↓↓
+        private const string CONFIG_FILE = @"D:\IRAM\2023_2024\0_POO\MAUI_Projects\Brasserie\Configuration\Datas\Config.txt";
         public static MauiApp CreateMauiApp()
         {
             var builder = MauiApp.CreateBuilder();
