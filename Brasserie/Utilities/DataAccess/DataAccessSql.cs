@@ -218,36 +218,29 @@ namespace Brasserie.Utilities.DataAccess
 
 
         /// <summary>
-        /// Creates a SQL request to insert a new staff member into the database with their properties.
+        /// create a sql request. Insert the staffMember fonction of his type and his internal properties values.
         /// </summary>
-        /// <param name="sm">Staff member object to insert</param>
-        /// <returns>SQL INSERT request</returns>
+        /// <param name="sm"></param>
+        /// <returns>sql INSERT request</returns>
         private string GetSqlInsertStaffMember(StaffMember sm)
         {
-            // Get the type of the staff member.
             string[] strType = sm.GetType().ToString().Split('.');
             string type = strType[strType.Length - 1];
-
             switch (type)
+
             {
                 case "StaffMember":
-                    // Construct SQL query for inserting a StaffMember.
-                    return $"INSERT INTO StaffMembers (Type, FirstName, LastName, Address, MobilePhone, EMail, Gender, BankAccount) " +
-                           $"VALUES ('{type}', '{sm.FirstName}', '{sm.LastName}', '{sm.Address}', '{sm.MobilePhoneNumber}', '{sm.Email}', " +
-                           $"{BoolSqlConvert(sm.Gender)}, '{sm.BankAccount}'); SELECT SCOPE_IDENTITY();";
 
+                    return $"INSERT INTO StaffMembers (Type, FirstName ,LastName,Address, MobilePhone, EMail, Gender, BankAccount, Salary) VALUES('{type}','{sm.FirstName}','{sm.LastName}','{sm.Address}','{sm.MobilePhoneNumber}','{sm.Email}',{BoolSqlConvert(sm.Gender)},'{sm.BankAccount}',{sm.GetSalary});SELECT SCOPE_IDENTITY();";
                 case "Manager":
-                    // Cast to Manager object.
                     Manager m = (Manager)sm;
-                    // Construct SQL query for inserting a Manager.
-                    return $"INSERT INTO StaffMembers (Type, FirstName, LastName, Address, MobilePhone, EMail, Gender, BankAccount, Login) " +
-                           $"VALUES ('{type}', '{sm.FirstName}', '{sm.LastName}', '{sm.Address}', '{sm.MobilePhoneNumber}', '{sm.Email}', " +
-                           $"{BoolSqlConvert(sm.Gender)}, '{sm.BankAccount}', '{m.Login}'); SELECT SCOPE_IDENTITY();";
+                    return $"INSERT INTO StaffMembers (Type, FirstName ,LastName,Address, MobilePhone, EMail, Gender, BankAccount, Salary, Login ) VALUES('{type}','{sm.FirstName}','{sm.LastName}','{sm.Address}','{sm.MobilePhoneNumber}','{sm.Email}',{BoolSqlConvert(sm.Gender)},'{sm.BankAccount}',{sm.GetSalary},'{m.Login}');SELECT SCOPE_IDENTITY();";
 
                 default:
-                    // If the type is not recognized, return null.
+
                     return null;
             }
+
         }
 
 

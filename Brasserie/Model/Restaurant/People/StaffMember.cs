@@ -78,6 +78,8 @@ namespace Brasserie.Model.Restaurant.People
         /// <summary>
         /// staff member gross salary
         /// </summary>
+        /// 
+        //salaire passé de protected à public pour gestion dans DataAccessSql 
         protected double Salary
         {
             get => _salary;
@@ -90,6 +92,13 @@ namespace Brasserie.Model.Restaurant.People
                 OnPropertyChanged(nameof(Salary));
             }
         }
+
+        /// <summary>
+        /// Propriété d'accès au salaire en lecture seule
+        /// </summary>
+        public double GetSalary => Salary; 
+
+
 
         #endregion
 
