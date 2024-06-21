@@ -138,35 +138,68 @@ namespace Brasserie.Utilities.DataAccess
         public override bool UpdateAllStaffMembers(StaffMembersCollection staffMembers)
         {
             string sql = string.Empty;
-
             try
             {
+                // Récupérer tous les IDs depuis le serveur SQL
+                List<int> sqlIds = new List<int>();
+                string sqlQuery = $"SELECT Id FROM StaffMembers";
+                SqlCommand selectCommand = new SqlCommand(sqlQuery, SqlConnection); // Renommage de la variable ici
+                SqlDataReader reader = selectCommand.ExecuteReader();
+                while (reader.Read())
+                {
+                    sqlIds.Add(reader.GetInt32(0));
+                }
+                reader.Close();
+                // Comparer les IDs avec ceux dans votre programme
+                List<int> programIds = new List<int>();
                 foreach (StaffMember sm in staffMembers)
                 {
-                    // If the ID already exists in the database, update its values; otherwise, insert it as a new record.
-                    sql = IsInDb(sm.Id, "Id", "StaffMembers") ? GetSqlUpdateStaffMember(sm) : GetSqlInsertStaffMember(sm);
+                    programIds.Add(sm.Id);
+                }
+                // Trouver les IDs manquants
+                List<int> missingIds = sqlIds.Except(programIds).ToList();
 
+                // Supprimer les IDs manquants de votre programme
+                foreach (int missingId in missingIds)
+                {
+                    // Supprimer l'ID manquant de votre base de données
+                    string deleteSql = $"DELETE FROM StaffMembers WHERE Id = {missingId}";
+                    SqlCommand deleteCommand = new SqlCommand(deleteSql, SqlConnection);
+                    deleteCommand.ExecuteNonQuery();
+                }
+
+                foreach (StaffMember sm in staffMembers)
+                {
+
+                    //if id already in databse, update his values, insert in the other case
+                    sql = IsInDb(sm.Id, "Id", "StaffMembers") ? GetSqlUpdateStaffMember(sm) : GetSqlInsertStaffMember(sm);
                     if (!string.IsNullOrEmpty(sql))
                     {
-                        // Execute the SQL command.
+                        //Console.WriteLine(sql);
                         SqlCommand command = new SqlCommand(sql, SqlConnection);
-                        int insertedId = Convert.ToInt32(command.ExecuteScalar()); // Get the auto-generated ID from the database.
-
+                        //command.ExecuteNonQuery(); //common Execute without getting id value
+                        //get id autocreated by the database (when update insertedId = 0)
+                        int insertedId = Convert.ToInt32(command.ExecuteScalar());
                         if (insertedId > 0)
                         {
-                            sm.Id = insertedId; // Update the ID of the staff member.
+                            sm.Id = insertedId;
                         }
+                    }
+                    else
+                    {
+
                     }
                 }
 
-                return true; // Update successful.
+                return true;
             }
             catch (Exception ex)
             {
-                // Handle exceptions and show an alert.
-                alertService.ShowAlert("Database Request Error", $"{ex.Message} \nSQL Query : {sql}");
-                return false; // Update failed.
+                alertService.ShowAlert("Database Request Error", $"{ex.Message} \nSQL Query: {sql}");
+                return false;
             }
+
+
         }
 
 
